@@ -47,14 +47,14 @@ function App() {
                     </li>
                 </ul>
             </nav>
-        </nav>      
+        </nav>   
+
+        <section className={styles.dividingLineNav}>
+        </section>   
       </header>
 
       <main>
         <section className={styles.containerHome}>
-            <section className={styles.dividingLine}>
-            </section>
-
             <section className={styles.banner}>
 
             </section>

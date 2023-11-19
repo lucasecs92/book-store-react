@@ -13,10 +13,6 @@ body {
     background-color: rgb(243, 242, 237);
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
 .navBarMain {
     display: flex;
     justify-content: space-evenly;
@@ -26,7 +22,7 @@ html, body {
     width: 100%;
     background-color: var(--yellow);    
     font-family: 'Raleway', sans-serif;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .navBarMain 
@@ -143,6 +139,11 @@ html, body {
     color: var(--navy);
 }
 
+.dividingLineNav {
+    height: 30px;
+    background-color: var(--beige);
+}
+
 /* Responsividade */
 @media (max-width: 1055px) {
     .navBarMain 
@@ -216,12 +217,6 @@ html, body {
     .navCart {
         margin-right: 20px;
     }
-}
-
-.containerHome
-.dividingLine {
-    height: 30px;
-    background-color: var(--beige);
 }
 
 .containerHome
