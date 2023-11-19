@@ -1,3 +1,8 @@
+/* ::-webkit-scrollbar {    
+    width: 0px;
+    height: 0px;
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,10 @@
 
 body {
     background-color: rgb(243, 242, 237);
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 .navBarMain {
@@ -40,6 +49,9 @@ body {
     font-size: 2.2rem;
     text-decoration: none;
     color: var(--blue);
+
+    display: flex;
+    align-items: center;
 }
 
 .navBarMain 
@@ -132,16 +144,27 @@ body {
 }
 
 /* Responsividade */
+@media (max-width: 1055px) {
+    .navBarMain 
+    .navSearchForm {
+        width: auto;
+    }
+}
 @media (max-width: 976px) {
 
     .navBarMain {
         height: auto;
-        display: grid;  
-        grid-template-columns: repeat(5, 1fr);
+        display: grid;
+        grid-template-columns: 1fr 6fr 0fr repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
+
+    /* .navBarMain 
+    .navSearchForm {
+        width: auto;
+    } */
 
     .navLeft {
         grid-area: 1 / 2 / 2 / 3;
@@ -155,15 +178,11 @@ body {
         justify-content: flex-end;
     }
 }
-
 @media (max-width: 780px) {
     
     /* html {
         font-size: 87.5%;   
     }   */
-    .navBarMain {
-        grid-template-columns: none;
-    }
 
     .navLeft, 
     .navSearchForm,
@@ -171,9 +190,15 @@ body {
         width: 100%;
     }
 
-    .navLogin, 
-    .navCart {
-        margin-right: 20px;
+    .navBarMain 
+    .navSearchForm {
+        width: auto;
+    }
+
+    .navBarMain 
+    .navLeft 
+    .navLogo {
+        font-size: 1.8rem;
     }
 
     .navLogin a,
@@ -185,6 +210,12 @@ body {
         width: 100%;
     }
 
+}
+@media (max-width: 500px) {
+    .navLogin, 
+    .navCart {
+        margin-right: 20px;
+    }
 }
 
 .containerHome

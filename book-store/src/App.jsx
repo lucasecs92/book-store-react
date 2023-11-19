@@ -13,8 +13,9 @@ function App() {
       <header>
         <nav className={styles.navBarMain}>
             <section className={styles.navLeft}>
-                <PiBooksDuotone />
-                <a className={styles.navLogo} href="#">Book store</a>
+                <a className={styles.navLogo} href="#">
+                    <PiBooksDuotone/>Book store
+                </a>
             </section>
             <form className={styles.navSearchForm}>
                 <select className={styles.dropdownMenu}>
