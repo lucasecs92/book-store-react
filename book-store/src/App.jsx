@@ -1,6 +1,7 @@
 // import { PiMagnifyingGlassBold, PiUserBold, PiBasketBold, PiFacebookLogoBold, PiYoutubeLogoBold, PiInstagramLogoBold, PiPinterestLogoBold } from "react-icons/pi";
 import { Basket, FacebookLogo, InstagramLogo, MagnifyingGlass, PinterestLogo, User, YoutubeLogo } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
+import { FaRegPaperPlane } from "react-icons/fa";
 
 import styles from './assets/css/App.module.css';
 
@@ -52,6 +53,7 @@ function App() {
             <section className={styles.dividingLineNav}>
             </section>
           </header>
+
           <main>
             <section className={styles.containerHome}>
                 <section className={styles.banner}>
@@ -60,12 +62,32 @@ function App() {
                 <section className={styles.maisVendidos}>
           
                 </section>
+
+                <section className={styles.newsletter}>
+                    <h3>Subscribe To Our Newsletter</h3>
+                    <form className={styles.newsletterForm}>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nihil velit suscipit, corporis dignissimos asperiores iste ipsa ducimus.</p>
+                        <div className={styles.containerInput}>
+                            <input
+                                className={styles.emailField}
+                                type="text"
+                                placeholder="Enter Your Email Address Here"
+                            />
+                            <button className={styles.newsletterBtn} type="submit">
+                                <span>SEND</span> <FaRegPaperPlane/>
+                            </button>
+                        </div>
+                    </form>
+                </section>
             </section>
           </main>
+
           <footer>
             <section className={styles.footer}>
+
                 <section className={styles.dividingLine}>
                 </section>
+
                 <section className={styles.mainFooter}>
                     <section className={styles.logoFooter}>
                         <a className={styles.logo} href="#">
@@ -73,7 +95,7 @@ function App() {
                         </a>
                     </section>
                     <aside className={styles.infoFooter}>
-                        <aside id={styles.first} className={styles.footerWrapper}>
+                        <aside className={styles.footerWrapper}>
                             <h2>About Us</h2>
                             <ul>
                                 <li><a href="#">ARTICLES</a></li>
@@ -83,7 +105,7 @@ function App() {
                                 <li><a href="#">DONATE</a></li>
                             </ul>
                         </aside>
-                        <aside id={styles.second} className={styles.footerWrapper}>
+                        <aside className={styles.footerWrapper}>
                             <h2>Discover</h2>
                             <ul>
                                 <li><a href="#">HOME</a></li>
@@ -93,7 +115,7 @@ function App() {
                                 <li><a href="#">ADVANCED SEARCH</a></li>
                             </ul>
                         </aside>
-                        <aside id={styles.third} className={styles.footerWrapper}>
+                        <aside className={styles.footerWrapper}>
                             <h2>My Account</h2>
                             <ul>
                                 <li><a href="#">SIGN</a></li>
@@ -102,7 +124,7 @@ function App() {
                                 <li><a href="#">TRACK MY ORDER</a></li>
                             </ul>
                         </aside>
-                        <aside id={styles.fourth} className={styles.footerWrapper}>
+                        <aside className={styles.footerWrapper}>
                             <h2>Help</h2>
                             <ul>
                                 <li><a href="#">HELP CENTER</a></li>
