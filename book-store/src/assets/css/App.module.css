@@ -338,8 +338,20 @@ body {
 
 @media (max-width: 500px) {   
     .containerHome 
+    .newsletter 
+    .newsletterForm {
+        width: 90vw;
+    }
+
+    .containerHome 
     .newsletter {
-        height: 100vh;
+        height: 70vh;
+        padding: 20px 0px;
+    }
+    .containerHome 
+    .newsletter h3 {
+        text-align: start;
+        width: 90vw;
     }
 
     .containerHome >
@@ -366,8 +378,22 @@ body {
     align-items: baseline;
 }
 
+.mainFooter 
+.companyBrand {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainFooter 
+.companyBrand p {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 70px;
+    line-height: 1.8;
+}
+
 .mainFooter
-.logoFooter 
+.companyBrand 
 .logo {
     width: 30vw;
     display: flex;
@@ -380,7 +406,7 @@ body {
 }
 
 .mainFooter
-.logoFooter svg {
+.companyBrand svg {
     font-size: 2.5rem;
     margin-right: 6px;
     color: var(--blue);
@@ -454,12 +480,6 @@ body {
         grid-column-gap: 70px;
         grid-row-gap: 20px;
     }
-
-    .mainFooter
-    .logoFooter 
-    .logo {
-        margin-bottom: 30px;
-    }
 }
 
 @media (max-width: 780px) {
@@ -469,7 +489,7 @@ body {
     }
 
     .mainFooter
-    .logoFooter 
+    .companyBrand 
     .logo {
         font-size: 2rem;
         width: auto;
@@ -495,6 +515,16 @@ body {
         align-items: stretch;
     }
     
+    .mainFooter 
+    .companyBrand p {
+        padding: 20px 0;
+    }
+
+    .mainFooter
+    .companyBrand 
+    .logo {
+        justify-content: flex-start;
+    }
     .secondaryFooter {
         width: 100vw;
         flex-direction: column-reverse;
@@ -504,4 +534,5 @@ body {
     .footerWrapper {
         width: 36vw;
     }
+
 }

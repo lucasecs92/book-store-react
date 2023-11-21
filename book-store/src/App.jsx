@@ -1,10 +1,8 @@
-// import { PiMagnifyingGlassBold, PiUserBold, PiBasketBold, PiFacebookLogoBold, PiYoutubeLogoBold, PiInstagramLogoBold, PiPinterestLogoBold } from "react-icons/pi";
 import { Basket, FacebookLogo, InstagramLogo, MagnifyingGlass, PinterestLogo, User, YoutubeLogo } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
 import { FaRegPaperPlane } from "react-icons/fa";
 
 import styles from './assets/css/App.module.css';
-
 import './assets/css/global.module.css';
 
 function App() {
@@ -89,11 +87,16 @@ function App() {
                 </section>
 
                 <section className={styles.mainFooter}>
-                    <section className={styles.logoFooter}>
+                    <aside className={styles.companyBrand}>
                         <a className={styles.logo} href="#">
                             <PiBooksDuotone/>Book store
                         </a>
-                    </section>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus liberolectus
+                            nonet psryroin. Amet sed lorem posuere sit iaculis amet, ac urna. Adipiscing fames
+                            semper erat ac in suspendisse iaculis.
+                        </p>
+                    </aside>
                     <aside className={styles.infoFooter}>
                         <aside className={styles.footerWrapper}>
                             <h2>About Us</h2>
@@ -135,6 +138,7 @@ function App() {
                         </aside>
                     </aside>
                 </section>
+
                 <section className={styles.secondaryFooter}>
                     <p>Copyright (c) 2023 Book Store.</p>
                     <section className={styles.socialLogos}>
