@@ -1,0 +1,208 @@
+.navBarMain {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    height: 15vh;
+    width: 100%;
+    background-color: var(--yellow);    
+    font-family: 'Raleway', sans-serif;
+    /* position: fixed; */
+}
+
+.navBarMain 
+.navLeft {
+    display: flex;
+    align-items: center;
+}
+
+.navBarMain 
+.navLeft svg {
+    font-size: 2.5rem;
+    margin-right: 6px;
+    color: var(--blue);
+}
+
+.navBarMain 
+.navLeft 
+.navLogo {
+    font-family: 'Young Serif', serif;
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: var(--blue);
+
+    display: flex;
+    align-items: center;
+}
+
+.navBarMain 
+.navSearchForm {
+    display: flex;
+    width: 40.625rem;
+    height: 2.813rem;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.navBarMain 
+.navSearchForm 
+.dropdownMenu {
+    width: 5rem;
+    background-color: var(--beige);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.438rem;
+    font-size: 0.9rem;
+    /*-webkit-appearance: none; /* WebKit */
+    /*-moz-appearance: none; /* Mozilla */
+    /*-o-appearance: none; /* Opera */
+    /*-ms-appearance: none; /* Internet Explorer */
+    /*appearance: none; /* CSS3 */
+}
+
+.searchField {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.438rem;
+    font-size: 1rem;
+}
+
+.searchBtn {
+    width: 3.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--beige);
+}
+.searchBtn svg {
+    font-size: 1.5rem;
+}
+
+.navBarMain
+.navRight {
+    display: flex;
+}
+
+.navBarMain
+.navRight
+.navRightUl {
+    display: flex;
+    text-align: center;  
+    font-weight: 500;
+}
+
+.navLogin,
+.navCart {
+    margin: 0.313rem;
+    padding: 0.188rem;
+    width: 5vw;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1rem;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.navLogin:hover,
+.navCart:hover {
+    background-color: var(--lightgray);
+}
+
+.navLogin svg,
+.navCart svg {
+    font-size: 1.8rem;
+}
+
+.navLogin a,
+.navCart a {
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.dividingLineNav {
+    height: 30px;
+    background-color: var(--beige);
+}
+
+/* Responsividade */
+@media (max-width: 1055px) {
+    .navBarMain 
+    .navSearchForm {
+        width: auto;
+    }
+}
+@media (max-width: 976px) {
+
+    .navBarMain {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 6fr 0fr repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .navLeft {
+        grid-area: 1 / 2 / 2 / 3;
+    } 
+    .navSearchForm {
+        grid-area: 2 / 2 / 3 / 5;
+        margin-bottom: 1.25rem;
+    }
+    .navRight {
+        grid-area: 1 / 4 / 2 / 5;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 780px) {
+    
+    /* html {
+        font-size: 87.5%;   
+    }   */
+
+    .navLeft, 
+    .navSearchForm,
+    .navRight {
+        width: 100%;
+    }
+
+    .navBarMain 
+    .navSearchForm {
+        width: auto;
+    }
+
+    .navBarMain 
+    .navLeft 
+    .navLogo {
+        font-size: 1.8rem;
+    }
+
+    .navLogin a,
+    .navCart a {
+        display: none;
+    }
+
+    .navLogo {
+        width: 100%;
+    }
+
+}
+@media (max-width: 500px) {
+    .navLogin, 
+    .navCart {
+        margin-right: 20px;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+    .searchField {
+        font-size: 0.9rem;
+    }
+}
