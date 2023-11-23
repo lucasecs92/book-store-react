@@ -1,0 +1,75 @@
+.slider {
+    /* height: 100vh; */
+    width: 100vw;
+    /* background-color: var(--beige); */
+    background-color: #fff;
+    color: black;
+    padding: 50px 100px;
+}
+
+.billboard {
+    padding: 70px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+}
+
+.bannerTitle {
+    /* width: 38%; */
+    margin-right: 205px;
+}
+
+.bannerTitle h2 {
+    font-size: 4.5em;
+    font-weight: 100;
+    line-height: 1.4;
+    margin: 25px 0;
+}
+
+.bannerTitle p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.bannerTitle 
+.btnWrap {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.bannerTitle 
+.billboardBtn {
+    color: var(--nude);
+    padding: 12px;
+    border: 1px solid var(--nude);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.bannerTitle 
+.billboardBtn:hover {
+    color: var(--navy);
+    border-color: var(--navy);
+    transition: 0.5s ease-out
+}
+
+.billboardBtn svg {
+    margin-left: 8px;
+}
+
+.slideItem {
+    display: block;
+}
+
+@media (max-width: 500px) {   
+
+    .slider {
+        width: 100vw;
+    }
+}

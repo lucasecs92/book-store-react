@@ -1,16 +1,16 @@
 import styles from '../css/HomePage.module.css';
 import { FaRegPaperPlane } from "react-icons/fa";
 
+import Slider from './Slider.jsx';
+
 const HomePage = () => {
 
     return (
         <>
             <section className={styles.containerHome}>
-                
-                <section className={styles.slider}>
 
-                </section>
-          
+                <Slider />
+                
                 <section className={styles.maisVendidos}>
           
                 </section>
