@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import image1 from '../images/book1.jpg';
-import image2 from '../images/book2.png';
+import image2 from '../images/book2.jpg';
 
 
 const Slider = () => {
@@ -27,11 +27,13 @@ const Slider = () => {
                     pagination={{ clickable: true }}
                     navigation
                     loop={true}
+                    speed={800}
                     onSlideChange={(swiper) => {
                         const index = swiper.realIndex;
                         setBookTitle(titles[index]);
                     }}
                 >
+
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
                             <section className={styles.billboard}>
@@ -53,6 +55,7 @@ const Slider = () => {
                             </section>
                         </SwiperSlide>
                     ))}
+                    
                 </Swiper>
             </section>
         </>

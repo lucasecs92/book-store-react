@@ -2,6 +2,7 @@ import styles from '../css/HomePage.module.css';
 import { FaRegPaperPlane } from "react-icons/fa";
 
 import Slider from './Slider.jsx';
+import BestSellers from './BestSellers.jsx';
 
 const HomePage = () => {
 
@@ -9,10 +10,10 @@ const HomePage = () => {
         <>
             <section className={styles.containerHome}>
 
-                <Slider />
+                <Slider/>
                 
                 <section className={styles.maisVendidos}>
-          
+                    <BestSellers/>
                 </section>
 
                 <section className={styles.newsletter}>

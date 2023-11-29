@@ -1,3 +1,10 @@
+.wrapNav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 .navBarMain {
     display: flex;
     justify-content: space-evenly;
@@ -7,7 +14,6 @@
     width: 100%;
     background-color: var(--yellow);    
     font-family: 'Raleway', sans-serif;
-    /* position: fixed; */
 }
 
 .navBarMain 
@@ -126,7 +132,8 @@
 
 .dividingLineNav {
     height: 30px;
-    background-color: var(--navy);
+    width: 100%;
+    background-color: var(--beige);
 }
 
 /* Responsividade */
