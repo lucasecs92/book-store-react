@@ -1,9 +1,3 @@
-.containerHome
-.maisVendidos {
-    background-color: var(--blue);
-    height: 70vh;
-}
-
 .containerHome 
 .newsletter {
     background-color: var(--beige);
@@ -119,10 +113,5 @@
     .newsletter h3 {
         text-align: start;
         width: 90vw;
-    }
-
-    .containerHome >
-    .maisVendidos{
-        width: 100vw;
     }
 }

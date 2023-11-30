@@ -1,8 +1,69 @@
-.bestSellersWrap {
+.bestSellers {
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+    height: 90vh;
 }
 
-.bestSellersWrap h3 {
+.title {
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.slideBook {
+    cursor: grab;
+    overflow: hidden;
+    text-align: center;
+    margin: 0.6rem;
+    padding: 0.6rem;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0.6rem;
+    padding: 0.6rem;
+}
+
+.inner:hover {
+    box-shadow: 0 0 10px #4d364b8f;
+} 
+
+.inner:hover .slideBookBtn {
+    background: var(--blue);
+    color: #fff;
+}
+
+.slideImg {
+    height: 350px;
+    padding: 0 14px 14px 14px;
+    display: block;
+}
+
+.slideBookInfo {
+    min-height: 5rem;
+}
+
+.slideBookBtn {
+    text-decoration: none;
+    padding: 10px 4.4rem;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    color: var(--blue);
+    transition: .2s all ease-in-out;
+}
+
+.slideImg, .slideBookTitle, .slideBookAutor {
+    cursor: pointer;
+} 
+
+/* h3 {
     text-align: center;
     font-family: 'Young Serif', serif;
     font-size: 2rem;
@@ -10,13 +71,20 @@
     padding: 30px;
 }
 
-.bestSellersWrap .carousel {
+.bestSellers {   
+    background-color: var(--blue);
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
 }
 
 .inner {
@@ -32,4 +100,11 @@
 .item img {
     width: 100%;
     height: 90%;
+    pointer-events: none;
 }
+
+@media (max-width: 500px) {
+    .bestSellers {
+        width: 100vw;
+    }
+}   */

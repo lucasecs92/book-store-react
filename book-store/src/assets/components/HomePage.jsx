@@ -12,9 +12,7 @@ const HomePage = () => {
 
                 <Slider/>
                 
-                <section className={styles.maisVendidos}>
-                    <BestSellers/>
-                </section>
+                <BestSellers/>
 
                 <section className={styles.newsletter}>
                     <h3>Subscribe To Our Newsletter</h3>
