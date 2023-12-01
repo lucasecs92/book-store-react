@@ -32,7 +32,7 @@ const Slider = () => {
                         const index = swiper.realIndex;
                         setBookTitle(titles[index]);
                     }}
-                >
+                >t
 
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>

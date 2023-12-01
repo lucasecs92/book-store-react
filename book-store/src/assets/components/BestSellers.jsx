@@ -1,9 +1,7 @@
-// import { useState, useEffect, useRef } from 'react';
-// import { motion } from "framer-motion";
-import { useState } from 'react';
 import styles from '../css/BestSellers.module.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import image1 from '../images/book1.jpg';
 import image2 from '../images/book2.jpg';
@@ -21,15 +19,48 @@ const BestSellers = () => {
 
     const [slidesPerView, setSlidePerView] = useState(4);
 
-    const images = [ image1, image2, image3, image4, image5, image6, image7, image8, image9, image10 ];
-    
-    // const carousel = useRef();
-    // const [width, setWidth] = useState(0);
+    const books = [
+        { id: 1, image: image1, title: 'Life of The Wild', author: 'Sanchit Howdy' },
+        { id: 2, image: image2, title: 'Birds Gonna be Happy', author: 'Timbur Hood' },
+        { id: 3, image: image3, title: 'Ways To Get Motivated, Avoid Procrastination, and Achieve Success.', author: 'Marc Suquetverd' },
+        { id: 4, image: image4, title: 'I See You', author: 'Paula Arevalo' },
+        { id: 5, image: image5, title: 'ASIAN Recipe Book', author: 'Chien-Shiung Wu' },
+        { id: 6, image: image6, title: 'The Secret Garden of Eternity', author: 'Geana Yureese' },
+        { id: 7, image: image7, title: 'A Guide to Baking Bread for Beginners', author: 'Chef Marie Curie' },
+        { id: 8, image: image8, title: 'Living Life in the Best Way', author: 'Amalia Santos' },
+        { id: 9, image: image9, title: 'Lost in the Maze of Wonders', author: 'Third R.' },
+        { id: 10, image: image10, title: 'Living Alone', author: 'Alexandre Nero' },
+    ];
 
-    // useEffect( () => {
-    //     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
-    //     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-    // }, [])
+    useEffect(() => {
+
+        function handleResize(){
+
+            if(window.innerWidth < 1255) {
+                setSlidePerView(3);
+            } else {
+                 setSlidePerView(4);
+            }
+            
+            if(window.innerWidth < 1040) {
+                setSlidePerView(2);
+            } 
+
+            if(window.innerWidth < 803) {
+                setSlidePerView(1); 
+            }
+
+        }
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+
+    }, [])
 
     return (
         <>
@@ -39,29 +70,48 @@ const BestSellers = () => {
                 <section className={styles.slideBook}>
                     <Swiper
                     slidesPerView={slidesPerView}
-                    // pagination={{ clickable: true }}
-                    navigation
+                    // navigation
+                    loop={true}
+                    // breakpoints={{
+                    //     320: {
+                    //         slidesPerView: 1,
+                    //         spaceBetween: 10
+                    //     },
+                    //     803: {
+                    //         slidesPerView: 2,
+                    //         spaceBetween: 20
+                    //     },
+                    //     1040: {
+                    //         slidesPerView: 3,
+                    //         spaceBetween: 30
+                    //     },
+                    //     1255: {
+                    //         slidesPerView: 4,
+                    //         spaceBetween: 40
+                    //     }
+                    // }}
                     >
-                        {images.map( (item, index) => {
+                        
+                        {books.map((book) => {
                             return (
 
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={book.id}>
 
                                     <section className={styles.inner}>
                                         <img
-                                        src={item}
-                                        alt="Slider"
+                                        src={book.image}
+                                        alt={book.title}
                                         className={styles.slideImg}
                                         />
                                         <aside className={styles.slideBookInfo}>
                                             <h2 className={styles.slideBookTitle}>
-                                                Titulo
+                                               {book.title}
                                             </h2>
                                             <p className={styles.slideBookAutor}>
-                                                Autor
+                                               {book.author}
                                             </p>
                                         </aside>
-                                        <a href="#" className={styles.slideBookBtn}>COMPRAR</a>
+                                        <a href="#" className={styles.slideBookBtn} aria-label={`Comprar ${book.title}`}>COMPRAR</a>
                                     </section>
 
                                 </SwiperSlide>
@@ -70,31 +120,6 @@ const BestSellers = () => {
                     </Swiper>
                 </section>
             </section>
-          {/* <h3>Mais Vendidos</h3>
-          <section className={styles.bestSellers}>
-
-                <motion.div className={styles.carousel} ref={carousel} whileTap={{ cursor: "grabbing" }}>
-
-                    <motion.div 
-                    className={styles.inner} 
-                    drag={'x'}
-                    dragConstraints={{ right: 0, left: - width }}
-                    initial={{ x: 100 }}
-                    animate={{ x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    >
-
-                        {images.map(image => (
-                            <motion.div className={styles.item} key={image}>
-                                <img src={image} alt="Texto alt" />
-                            </motion.div>
-                        ))}
-
-                    </motion.div>
-
-                </motion.div>
-
-          </section> */}
         </>
     )
 }
