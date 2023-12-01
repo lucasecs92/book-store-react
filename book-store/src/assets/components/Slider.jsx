@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import styles from '../css/Slider.module.css';
+
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaArrowRightLong } from "react-icons/fa6";
+// import { EffectFade } from 'swiper/modules';
 
-import image1 from '../images/book1.jpg';
-import image2 from '../images/book2.jpg';
+import image1 from '../images/book8.jpg';
+import image2 from '../images/book9.jpg';
 
 
 const Slider = () => {
@@ -22,6 +24,8 @@ const Slider = () => {
         <>
             <section className={styles.slider}>
                 <Swiper
+                    // modules={[EffectFade]}
+                    // effect="fade"
                     spaceBetween={50}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
@@ -32,12 +36,16 @@ const Slider = () => {
                         const index = swiper.realIndex;
                         setBookTitle(titles[index]);
                     }}
-                >t
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    }}
+                >
 
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
                             <section className={styles.billboard}>
-                                <aside className={styles.bannerTitle}>
+                                <aside className={styles.bannerInfo}>
                                     <h2>{bookTitle}</h2>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas culpa alias quis fuga accusamus, autem, accusantium id ad quibusdam placeat, quidem nulla.</p>
                                     <span className={styles.btnWrap}>
@@ -50,7 +58,7 @@ const Slider = () => {
                                 <img
                                     src={image}
                                     alt={`slide ${index}`}
-                                    className={styles.slideItem}
+                                    className={styles.slideImg}
                                 />
                             </section>
                         </SwiperSlide>
