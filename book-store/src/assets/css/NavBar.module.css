@@ -136,6 +136,7 @@
     background-color: var(--beige);
 }
 
+
 /* Responsividade */
 @media (max-width: 1055px) {
     .navBarMain 
