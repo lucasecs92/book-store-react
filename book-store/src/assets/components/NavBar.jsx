@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Basket, MagnifyingGlass, User } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
 import FormLogin from './FormLogin.jsx';
+import { FaTimes } from 'react-icons/fa';
 
 const NavBar = () => {
     const [showLoginForm, setShowLoginForm] = useState(false);
@@ -68,6 +69,7 @@ const NavBar = () => {
                     </ul>
                 </nav>
             </nav>
+
             <nav className={styles.dividingLineNav}>
             </nav>
         </section>
@@ -86,6 +88,9 @@ const NavBar = () => {
                 zIndex: 9999, // para garantir que o FormLogin apareça por cima de todos os outros componentes
             }}>
                 <FormLogin />
+                <section className={styles.closeLoginBtn} onClick={handleLoginClick}>
+                    <FaTimes/>
+                </section>
             </div>
         )}
       </>

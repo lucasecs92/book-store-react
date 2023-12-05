@@ -136,6 +136,14 @@
     background-color: var(--beige);
 }
 
+.closeLoginBtn {
+    position: absolute;
+    top: 1.5rem; 
+    right: 2.5rem;
+    font-size: 3rem;
+    color: var(--preto);
+    cursor: pointer;
+}
 
 /* Responsividade */
 @media (max-width: 1055px) {

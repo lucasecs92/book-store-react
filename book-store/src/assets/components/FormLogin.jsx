@@ -27,46 +27,53 @@ const FormLogin = () => {
     }, []);
  
     return (
-
-        <section className={styles.container}>
-            <div className={styles.buttonsForm}>
-                <div className={styles.btnColor} ref={btnColorRef}></div>
-                <button id="btnSignin">Sign in</button>
-                <button id="btnSignup">Sign up</button>
-            </div>
-
-            <form className={styles.signIn} ref={formSigninRef}>
-
-                <input className={styles.inputText} type="text" placeholder="Email" required />
-                <FaEnvelope />
-
-                <input className={styles.inputPassword} type="password" placeholder="Password" required />
-                <FaLock />
+        <>
+            <section className={styles.container}>
                 
-                <div className={styles.divCheck}>
-                    <input type="checkbox" />
-                    <span>Remember Password</span>
+                <div className={styles.buttonsForm}>
+                    <div className={styles.btnColor} ref={btnColorRef}></div>
+                    <button id="btnSignin">Sign in</button>
+                    <button id="btnSignup">Sign up</button>
                 </div>
-                <button className={styles.btnSubmit} type="submit">Sign in</button>
-            </form>
 
-            <form className={styles.signUp} ref={formSignupRef}>
-                <input className={styles.inputText} type="text" placeholder="Email" required />
-                <FaEnvelope className={styles.iEmail}/>
-                {/* <i className="fas fa-envelope iEmail"></i> */}
-                <input className={styles.inputPassword} type="password" placeholder="Password" required />
-                <FaLock className={styles.iPassword}/>
-                {/* <i className="fas fa-lock iPassword"></i> */}
-                <input className={styles.inputPassword} type="password" placeholder="Password" required />
-                <FaLock className={styles.iPassword2}/>
-                {/* <i className="fas fa-lock iPassword2"></i> */}
-                <div className={styles.divCheck}>
-                    <input type="checkbox" required />
-                    <span>I agree that the Book Store, including member, may send me content, offers and more.</span>
-                </div>
-                <button className={styles.btnSubmit} type="submit">Sign up</button>
-            </form>
-        </section>
+                <form className={styles.signIn} ref={formSigninRef}>
+
+                    <span>username</span>
+                    <input className={styles.inputText} type="text" placeholder="enter your email" required />
+
+                    <span>password</span>
+                    <input className={styles.inputPassword} type="password" placeholder="enter your password" required />
+                    
+                    <div className={styles.divCheck}>
+                        <input type="checkbox" id='remember-me'/>
+                        <label htmlFor="remember-me">remember me</label>
+                    </div>
+
+                    <button className={styles.btnSubmit} type="submit">sign in</button>
+
+                    <p>forget password ? <a href="#">click here</a></p>
+                </form> 
+
+                <form className={styles.signUp} ref={formSignupRef}>
+
+                    <input className={styles.inputText} type="text" placeholder="Email" required />
+                    <FaEnvelope className={styles.iEmail}/>
+
+                    <input className={styles.inputPassword} type="password" placeholder="Password" required />
+                    <FaLock className={styles.iPassword}/>
+
+                    <input className={styles.inputPassword} type="password" placeholder="Confirm Password" required />
+                    <FaLock className={styles.iPassword2}/>
+
+                    <div className={styles.divCheck}>
+                        <input type="checkbox" required id='i-agree'/>
+                        <label htmlFor="i-agree">I agree that the Book Store, including member, may send me content, offers and more.</label>
+                    </div>
+                    
+                    <button className={styles.btnSubmit} type="submit">register</button>
+                </form>
+            </section>
+        </>
     )
 }
 
