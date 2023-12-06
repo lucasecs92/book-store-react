@@ -140,8 +140,8 @@
     position: absolute;
     top: 1.5rem; 
     right: 2.5rem;
-    font-size: 3rem;
-    color: var(--preto);
+    font-size: 2rem;
+    color: var(--branco);
     cursor: pointer;
 }
 

@@ -1,13 +1,14 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef} from 'react';
 import styles from '../css/FormLogin.module.css';
-
-import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const FormLogin = () => {
 
     const formSigninRef = useRef(null);
     const formSignupRef = useRef(null);
     const btnColorRef = useRef(null);
+    
+    // const [textColorSignin, setTextColorSignin] = useState('white');
+    // const [textColorSignup, setTextColorSignup] = useState('black');
 
     useEffect(() => {
         const btnSignin = document.querySelector('#btnSignin');
@@ -32,17 +33,15 @@ const FormLogin = () => {
                 
                 <div className={styles.buttonsForm}>
                     <div className={styles.btnColor} ref={btnColorRef}></div>
-                    <button id="btnSignin">Sign in</button>
-                    <button id="btnSignup">Sign up</button>
+                    <button id="btnSignin" type="button">Sign In</button>
+                    <button id="btnSignup" type="button">Sign Up</button>
                 </div>
 
                 <form className={styles.signIn} ref={formSigninRef}>
 
-                    <span>username</span>
-                    <input className={styles.inputText} type="text" placeholder="enter your email" required />
+                    <input className={styles.inputText} id='input-text' type="text" placeholder="Email" required />
 
-                    <span>password</span>
-                    <input className={styles.inputPassword} type="password" placeholder="enter your password" required />
+                    <input className={styles.inputPassword} type="password" placeholder="Password" required />
                     
                     <div className={styles.divCheck}>
                         <input type="checkbox" id='remember-me'/>
@@ -51,26 +50,23 @@ const FormLogin = () => {
 
                     <button className={styles.btnSubmit} type="submit">sign in</button>
 
-                    <p>forget password ? <a href="#">click here</a></p>
+                    <a href="#">forget password ?</a>
                 </form> 
 
                 <form className={styles.signUp} ref={formSignupRef}>
 
                     <input className={styles.inputText} type="text" placeholder="Email" required />
-                    <FaEnvelope className={styles.iEmail}/>
 
-                    <input className={styles.inputPassword} type="password" placeholder="Password" required />
-                    <FaLock className={styles.iPassword}/>
+                    <input className={styles.inputPassword} type="password" placeholder="Create Password" required />
 
                     <input className={styles.inputPassword} type="password" placeholder="Confirm Password" required />
-                    <FaLock className={styles.iPassword2}/>
 
                     <div className={styles.divCheck}>
                         <input type="checkbox" required id='i-agree'/>
                         <label htmlFor="i-agree">I agree that the Book Store, including member, may send me content, offers and more.</label>
                     </div>
                     
-                    <button className={styles.btnSubmit} type="submit">register</button>
+                    <button className={styles.btnSubmit} type="submit">register now</button>
                 </form>
             </section>
         </>
