@@ -44,14 +44,14 @@
 .navBarMain 
 .navSearchForm {
     display: flex;
+    justify-content: center;
     width: 40.625rem;
     height: 2.813rem;
-    justify-content: center;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.navBarMain 
+/* 
 .navSearchForm 
 .dropdownMenu {
     width: 5rem;
@@ -61,13 +61,44 @@
     outline: none;
     padding: 0.438rem;
     font-size: 0.9rem;
+
     /*-webkit-appearance: none; /* WebKit */
     /*-moz-appearance: none; /* Mozilla */
     /*-o-appearance: none; /* Opera */
     /*-ms-appearance: none; /* Internet Explorer */
-    /*appearance: none; /* CSS3 */
+    /*appearance: none; /* CSS3 */  /*
+} */
+
+.dropdown {
+    outline: none;
+    border: none;
+    width: 8.5rem;
+    background-color: var(--beige);
+    color: var(--gray);
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
 }
 
+.dropdownSelect {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+.dropdownList {
+    background-color: var(--beige);
+    border-radius: 6px;
+    position: absolute;
+}
+
+.dropdownListItem {
+    padding: 1rem;
+    font-size: 1rem;
+}
+  
 .searchField {
     width: 100%;
     border: none;

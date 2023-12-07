@@ -1,18 +1,35 @@
 import styles from '../css/NavBar.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Basket, MagnifyingGlass, User } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
 import FormLogin from './FormLogin.jsx';
-import { FaTimes } from 'react-icons/fa';
+import { FaCaretDown, FaTimes } from 'react-icons/fa';
 
 const NavBar = () => {
-    const [showLoginForm, setShowLoginForm] = useState(false);
-
+    
+    const [showLoginForm, setShowLoginForm] = useState(false);   
     const handleLoginClick = () => {
         setShowLoginForm(!showLoginForm);
     };
- 
+
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsOpen(false);
+          }
+        }
+      
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+    
+
     const handleEscKey = (event) => {
         if (event.key === 'Escape') {
             setShowLoginForm(false);
@@ -39,14 +56,40 @@ const NavBar = () => {
                     </a>
                 </section>
                 <form className={styles.navSearchForm}>
-                    <select className={styles.dropdownMenu}>
-                        <option className={styles.dropdownItem} value="Todos">Todos</option>
-                        <option className={styles.dropdownItem} value="Nome do livro">Nome do livro</option>
-                        <option className={styles.dropdownItem} value="Autor">Autor</option>
-                        <option className={styles.dropdownItem}value="Titulo">Título</option>
-                        <option className={styles.dropdownItem} value="Editora">Editora</option>
-                        <option className={styles.dropdownItem} value="Descrição">Descrição</option>
-                    </select>
+
+                <section className={styles.dropdown} ref={dropdownRef}>
+                    <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
+                        <span className={styles.select}>Todos</span>
+                        <FaCaretDown />
+                    </section>
+
+                    {isOpen && (
+                    <section className={styles.dropdownList}>
+                        <div className={styles.dropdownListItem}>Nome do livro</div>
+                        <div className={styles.dropdownListItem}>Autor</div>
+                        <div className={styles.dropdownListItem}>Título</div>
+                        <div className={styles.dropdownListItem}>Editora</div>
+                        <div className={styles.dropdownListItem}>Descrição</div>
+                    </section>
+                    )}
+                </section>
+
+                    {/* <section className={styles.selectBox}>
+
+                        <select className={styles.dropdownMenu}>
+                            <option value="">Todos</option>
+                            <option value="nome do livro">Nome do livro</option>
+                            <option value="autor">Autor</option>
+                            <option value="titulo">Título</option>
+                            <option value="Editora">Editora</option>
+                            <option value="Descrição">Descrição</option>
+                        </select>
+
+                        <div className={styles.iconContainer}>
+                            <FaCaretDown />
+                        </div>
+                    </section> */}
+                    
                     <input
                         className={styles.searchField}
                         type="text"
