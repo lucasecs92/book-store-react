@@ -1,6 +1,6 @@
 .slider {
     width: 100vw;
-    background-color: #fff;
+    background-color: var(--beige);
     color: black;
     padding: 80px;
 }

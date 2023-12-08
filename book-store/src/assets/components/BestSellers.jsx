@@ -1,6 +1,6 @@
 import styles from '../css/BestSellers.module.css';
-
 import { useState, useEffect } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import image1 from '../images/book1.jpg';

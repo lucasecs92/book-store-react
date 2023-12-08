@@ -55,50 +55,36 @@ const NavBar = () => {
                         <PiBooksDuotone/>Book store
                     </a>
                 </section>
+
                 <form className={styles.navSearchForm}>
-
-                <section className={styles.dropdown} ref={dropdownRef}>
-                    <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
-                        <span className={styles.select}>Todos</span>
-                        <FaCaretDown />
-                    </section>
-
-                    {isOpen && (
-                    <section className={styles.dropdownList}>
-                        <div className={styles.dropdownListItem}>Nome do livro</div>
-                        <div className={styles.dropdownListItem}>Autor</div>
-                        <div className={styles.dropdownListItem}>Título</div>
-                        <div className={styles.dropdownListItem}>Editora</div>
-                        <div className={styles.dropdownListItem}>Descrição</div>
-                    </section>
-                    )}
-                </section>
-
-                    {/* <section className={styles.selectBox}>
-
-                        <select className={styles.dropdownMenu}>
-                            <option value="">Todos</option>
-                            <option value="nome do livro">Nome do livro</option>
-                            <option value="autor">Autor</option>
-                            <option value="titulo">Título</option>
-                            <option value="Editora">Editora</option>
-                            <option value="Descrição">Descrição</option>
-                        </select>
-
-                        <div className={styles.iconContainer}>
+                    <section className={styles.dropdown} ref={dropdownRef}>
+                        <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
+                            <span className={styles.select}>Todos</span>
                             <FaCaretDown />
-                        </div>
-                    </section> */}
-                    
+                        </section>
+
+                        {isOpen && (
+                        <section className={styles.dropdownList}>
+                            <div className={styles.dropdownListItem}>Nome do livro</div>
+                            <div className={styles.dropdownListItem}>Autor</div>
+                            <div className={styles.dropdownListItem}>Título</div>
+                            <div className={styles.dropdownListItem}>Editora</div>
+                            <div className={styles.dropdownListItem}>Descrição</div>
+                        </section>
+                        )}
+                    </section>
+                        
                     <input
                         className={styles.searchField}
                         type="text"
                         placeholder="O que você está buscando?"
                     />
+
                     <button className={styles.searchBtn} type="submit">
                         <MagnifyingGlass/>
                     </button>
                 </form>
+
                 <nav className={styles.navRight}>
                     <ul className={styles.navRightUl}>
                         <li className={styles.navLogin} onClick={handleLoginClick}>
