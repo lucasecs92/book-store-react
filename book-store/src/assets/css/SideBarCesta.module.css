@@ -1,0 +1,21 @@
+.basketContainer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 27%;
+    max-width: 400px;
+    min-width: 280px;
+    z-index: 1;
+    background-color: var(--lightgray);
+    transition: .5s ease;
+    overflow-x: hidden;
+}
+
+.basketHeader {
+    background-color: var(--yellow);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+} 

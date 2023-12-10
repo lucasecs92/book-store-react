@@ -22,16 +22,16 @@ const BestSellers = () => {
     const [isNavigationEnabled, setIsNavigationEnabled] = useState(window.innerWidth > 1366);
 
     const books = [
-        { id: 1, image: image1, title: 'Living Life in the Best Way', author: 'Amalia Santos' },
-        { id: 2, image: image2, title: 'Lost in the Maze of Wonders', author: 'Third R.' },
-        { id: 3, image: image3, title: 'Ways To Get Motivated, Avoid Procrastination, and Achieve Success.', author: 'Marc Suquetverd' },
-        { id: 4, image: image4, title: 'I See You', author: 'Paula Arevalo' },
-        { id: 5, image: image5, title: 'ASIAN Recipe Book', author: 'Chien-Shiung Wu' },
-        { id: 6, image: image6, title: 'The Secret Garden of Eternity', author: 'Geana Yureese' },
-        { id: 7, image: image7, title: 'A Guide to Baking Bread for Beginners', author: 'Chef Marie Curie' },
-        { id: 8, image: image8, title: 'Life of The Wild', author: 'Sanchit Howdy' },
-        { id: 9, image: image9, title: 'Birds Gonna be Happy', author: 'Timbur Hood' },
-        { id: 10, image: image10, title: 'Living Alone', author: 'Alexandre Nero' },
+        { id: 1, image: image1, title: 'Living Life in the Best Way', author: 'Amalia Santos', price: '$35.00' },
+        { id: 2, image: image2, title: 'Lost in the Maze of Wonders', author: 'Third R.', price: '$40.00' },
+        { id: 3, image: image3, title: 'Ways To Get Motivated, Avoid Procrastination, and Achieve Success.', author: 'Marc Suquetverd', price: '$38.00' },
+        { id: 4, image: image4, title: 'I See You', author: 'Paula Arevalo', price: '$45.00' },
+        { id: 5, image: image5, title: 'ASIAN Recipe Book', author: 'Chien-Shiung Wu', price: '$35.00' },
+        { id: 6, image: image6, title: 'The Secret Garden of Eternity', author: 'Geana Yureese', price: '$34.00' },
+        { id: 7, image: image7, title: 'A Guide to Baking Bread for Beginners', author: 'Chef Marie Curie', price: '$42.00' },
+        { id: 8, image: image8, title: 'Life of The Wild', author: 'Sanchit Howdy', price: '$40.00' },
+        { id: 9, image: image9, title: 'Birds Gonna be Happy', author: 'Timbur Hood', price: '$35.00' },
+        { id: 10, image: image10, title: 'Living Alone', author: 'Alexandre Nero', price: '$44.00' },
     ];
 
     useEffect(() => {
@@ -87,7 +87,6 @@ const BestSellers = () => {
                             return (
 
                                 <SwiperSlide key={book.id}>
-
                                     <section className={styles.inner}>
                                         <img
                                         src={book.image}
@@ -101,10 +100,12 @@ const BestSellers = () => {
                                             <p className={styles.slideBookAutor}>
                                                {book.author}
                                             </p>
+                                            <p className={styles.slideBookPrice}>
+                                               {book.price}
+                                            </p>
                                         </aside>
                                         <a href="#" className={styles.slideBookBtn} aria-label={`Comprar ${book.title}`}>COMPRAR</a>
                                     </section>
-
                                 </SwiperSlide>
                             )
                         })}

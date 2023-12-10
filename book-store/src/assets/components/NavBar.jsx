@@ -5,9 +5,17 @@ import { Basket, MagnifyingGlass, User } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
 import FormLogin from './FormLogin.jsx';
 import { FaCaretDown, FaTimes } from 'react-icons/fa';
+import SideBarCesta from './SideBarCesta.jsx';
 
 const NavBar = () => {
-    
+
+    const sidebarRef = useRef(null);
+
+    const [showSideBarCesta, setShowSideBarCesta] = useState(false);
+    const handleCartClick = () => {
+        setShowSideBarCesta(!showSideBarCesta);
+    };
+     
     const [showLoginForm, setShowLoginForm] = useState(false);   
     const handleLoginClick = () => {
         setShowLoginForm(!showLoginForm);
@@ -18,9 +26,12 @@ const NavBar = () => {
 
     useEffect(() => {
         function handleClickOutside(event) {
-          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setIsOpen(false);
-          }
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setShowSideBarCesta(false);
+            }
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
         }
       
         document.addEventListener('mousedown', handleClickOutside);
@@ -31,6 +42,9 @@ const NavBar = () => {
     
 
     const handleEscKey = (event) => {
+        if (event.key === 'Escape') {
+            setShowSideBarCesta(false);
+        }
         if (event.key === 'Escape') {
             setShowLoginForm(false);
         }
@@ -89,11 +103,11 @@ const NavBar = () => {
                     <ul className={styles.navRightUl}>
                         <li className={styles.navLogin} onClick={handleLoginClick}>
                             <aside><User/></aside>
-                            <a href="#">Login</a>
+                            <a href="#">Entrar</a>
                         </li>
-                        <li className={styles.navCart}>
+                        <li className={styles.navCart} onClick={handleCartClick}>
                             <aside><Basket /></aside>
-                            <a href="#">Cart</a>
+                            <a href="#">Cesta</a>
                         </li>
                     </ul>
                 </nav>
@@ -118,6 +132,26 @@ const NavBar = () => {
             }}>
                 <FormLogin />
                 <section className={styles.closeLoginBtn} onClick={handleLoginClick}>
+                    <FaTimes/>
+                </section>
+            </div>
+        )}
+
+        {showSideBarCesta && (
+            <div ref={sidebarRef} style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)', // para adicionar um fundo escurecido
+                zIndex: 9999, // para garantir que o SideBarCesta apareça por cima de todos os outros componentes
+            }}>
+                <SideBarCesta />
+                <section className={styles.closeLoginBtn} onClick={handleCartClick}>
                     <FaTimes/>
                 </section>
             </div>

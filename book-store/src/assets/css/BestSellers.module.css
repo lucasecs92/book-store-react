@@ -29,6 +29,7 @@
     transition: .2s all ease-in-out;
     margin: 0.6rem;
     padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+    cursor: pointer;
 }
 
 .inner:hover {
@@ -61,6 +62,11 @@
     font-weight: lighter;
 }
 
+.slideBookPrice {
+    padding: 1rem 0rem;
+    color: var(--gray);
+}
+
 .slideBookBtn {
     text-decoration: none;
     padding: 10px 4.4rem;
@@ -70,10 +76,6 @@
     transition: .2s all ease-in-out;
     font-weight: 500;
 }
-
-.slideImg, .slideBookTitle, .slideBookAutor {
-    cursor: pointer;
-} 
 
 @media (max-width: 803px) {
 
