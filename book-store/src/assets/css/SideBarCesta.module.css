@@ -10,6 +10,7 @@
     background-color: var(--lightgray);
     transition: .5s ease;
     overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .basketHeader {
@@ -17,5 +18,12 @@
     height: 3.5rem;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    justify-content: space-between;
+    padding: 0 15px;
 } 
+
+.closeBtn {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
