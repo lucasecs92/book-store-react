@@ -14,7 +14,6 @@ import image8 from '../images/book8.jpg';
 import image9 from '../images/book9.jpg';
 import image10 from '../images/book10.jpg';
 
-
 const BestSellers = () => {
 
     const [slidesPerView, setSlidePerView] = useState(4);

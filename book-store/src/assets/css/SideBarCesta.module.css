@@ -23,19 +23,107 @@
     padding: 0 15px;
 } 
 
-.closeBtn {
+.closeHeaderBtn {
     font-size: 1.7rem;
     cursor: pointer;
 }
 
-.basketArea {
+.basketItems {
+    height: 100%;
+    padding: 0 15px;
+    /*  display: flex;
+    justify-content: center;
+    margin-top: 60%;
+    padding: 17rem 0; */
+}
+.basketItemBook {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.basketItemImg {
+    display: inline-block;
+    width: 70px;
+    height: 85px;
+}
+
+.basketInfoProduto {
+    display: inline-block;
+    width: 80%;
+    padding-left: 15px;
+}
+.basketInfoWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantidadeProduto {
+    display: flex;
+    justify-content: 
+    space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+.basketAddRemove {
+    padding: 5px;
+    border: 1px solid var(--lightgray);
+}
+.quantidadeNumber {
+    width: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.quantidadeMinus, 
+.quantidadePlus {
+    text-decoration: none;
+    display: inline-block;
+    width: 23px;
+    height: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.basketFooter {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--lightgray);
+
+    position: fixed;
+    width: 27vw;
+    bottom: 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.purchaseBtn {
+    text-transform: uppercase;
+    width: 100%;
+    background-color: var(--blue);
+    padding: 0.7rem;
+    font-size: 1rem;
+    height: 3.5rem;
     display: flex;
     justify-content: center;
-    padding: 17rem 0;
+    align-items: center;
+}
+.purchaseBtn a {
+    color: var(--branco);
+    text-decoration: none;
 }
 
 
-.emptyBasket {
+
+
+
+
+
+/* .emptyBasket {
     color: var(--nude);
     position: fixed;
 }
@@ -43,4 +131,4 @@
 .basketIcon {
     text-align: center;
     font-size: 5rem;
-}
+} */
