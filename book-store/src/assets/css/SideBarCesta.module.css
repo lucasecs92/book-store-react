@@ -7,10 +7,11 @@
     max-width: 400px;
     min-width: 280px;
     z-index: 1;
-    background-color: var(--lightgray);
+    background-color: var(--branco);
     transition: .5s ease;
     overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
+    color: var(--gray);
 }
 
 .basketHeader {
@@ -18,7 +19,6 @@
     height: 3.5rem;
     display: flex;
     align-items: center;
-    /* padding-left: 20px; */
     justify-content: space-between;
     padding: 0 15px;
 } 
@@ -26,4 +26,21 @@
 .closeBtn {
     font-size: 1.7rem;
     cursor: pointer;
+}
+
+.basketArea {
+    display: flex;
+    justify-content: center;
+    padding: 17rem 0;
+}
+
+
+.emptyBasket {
+    color: var(--nude);
+    position: fixed;
+}
+
+.basketIcon {
+    text-align: center;
+    font-size: 5rem;
 }

@@ -3,6 +3,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 
 import Slider from './Slider.jsx';
 import BestSellers from './BestSellers.jsx';
+import Interest from './Interest.jsx';
 
 const HomePage = () => {
 
@@ -14,6 +15,8 @@ const HomePage = () => {
                 
                 <BestSellers/>
 
+                <Interest/>
+                
                 <section className={styles.newsletter}>
                     <h3>Subscribe To Our Newsletter</h3>
                     <form className={styles.newsletterForm}>

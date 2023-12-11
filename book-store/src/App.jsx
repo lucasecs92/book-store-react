@@ -5,7 +5,6 @@ import NavBar from './assets/components/NavBar.jsx';
 import HomePage from './assets/components/HomePage.jsx';
 import Footer from './assets/components/Footer.jsx';
 
-
 function App() {
 
   return (

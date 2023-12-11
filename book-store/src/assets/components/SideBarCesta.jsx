@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../css/SideBarCesta.module.css'
 
-import { LuX } from "react-icons/lu";
+import { LuShoppingBasket, LuX } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
 const SideBarCesta = ({ onClose }) => {
@@ -26,10 +26,20 @@ const SideBarCesta = ({ onClose }) => {
                                 <LuX />
                             </div>
                         </header>
-                        <section className={styles.basketArea}>
-                            <div className={styles.emptyBasket}>
-                            </div>
-                        </section>
+                        <main className={styles.basketArea}>
+                            
+                            <section className={styles.emptyBasket}>
+                                <div className={styles.basketIcon}>
+                                    <LuShoppingBasket/>
+                                </div>
+                                <div className={styles.emptyText}>
+                                    <p>Sua cesta está vazia</p>
+                                </div>
+                            </section>
+                        </main>
+                        <footer className={styles.basketFooter}>
+
+                        </footer>
                     </section>
                 </section>
             </section>

@@ -74,7 +74,7 @@ const NavBar = () => {
                     <section className={styles.dropdown} ref={dropdownRef}>
                         <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
                             <span className={styles.select}>Todos</span>
-                            <FaCaretDown />
+                            <FaCaretDown/>
                         </section>
 
                         {isOpen && (

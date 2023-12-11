@@ -165,7 +165,7 @@
 .dividingLineNav {
     height: 30px;
     width: 100%;
-    background-color: var(--branco);
+    background-color: var(--gray);
 }
 
 .closeLoginBtn {
