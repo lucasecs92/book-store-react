@@ -7,7 +7,9 @@ import FormLogin from './FormLogin.jsx';
 import { FaCaretDown, FaTimes } from 'react-icons/fa';
 import SideBarCesta from './SideBarCesta.jsx';
 
-const NavBar = () => {
+import PropTypes from 'prop-types';
+
+const NavBar = (props) => {
 
     const sidebarRef = useRef(null);
 
@@ -150,7 +152,7 @@ const NavBar = () => {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)', // para adicionar um fundo escurecido
                 zIndex: 9999, // para garantir que o SideBarCesta apareça por cima de todos os outros componentes
             }}>
-                <SideBarCesta onClose={handleCartClick}/>
+                <SideBarCesta onClose={handleCartClick} cartItems={props.cartItems}/>
                 <section className={styles.closeLoginBtn} onClick={handleCartClick}>
                     <FaTimes/>
                 </section>
@@ -159,5 +161,9 @@ const NavBar = () => {
       </>
     )
 }
+
+NavBar.propTypes = {
+    cartItems: PropTypes.array.isRequired,
+};
 
 export default NavBar;

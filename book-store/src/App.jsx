@@ -4,17 +4,24 @@ import styles from './assets/css/App.module.css';
 import NavBar from './assets/components/NavBar.jsx';
 import HomePage from './assets/components/HomePage.jsx';
 import Footer from './assets/components/Footer.jsx';
+import { useState } from 'react';
 
 function App() {
 
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (book) => {
+    setCartItems((prevItems) => [...prevItems, book]);
+  };
+  
   return (
     <>
       <section className={styles.containerApp}>
           <header>
-            <NavBar/>
+            <NavBar cartItems={cartItems}/>
           </header>
           <main>
-            <HomePage/>
+            <HomePage addToCart={addToCart}/>
           </main>
           <footer>
             <Footer/>
@@ -24,4 +31,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

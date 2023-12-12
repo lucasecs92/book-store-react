@@ -44,7 +44,6 @@
 .basketItemImg {
     display: inline-block;
     width: 70px;
-    height: 85px;
 }
 
 .basketInfoProduto {
@@ -55,6 +54,10 @@
 .basketInfoWrap {
     display: flex;
     justify-content: space-between;
+}
+
+.produtoTitle {
+    font-size: 0.9rem;
 }
 
 .quantidadeProduto {
@@ -111,6 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .purchaseBtn a {
     color: var(--branco);

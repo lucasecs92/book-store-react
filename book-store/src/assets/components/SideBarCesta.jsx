@@ -4,7 +4,7 @@ import styles from '../css/SideBarCesta.module.css'
 import { LuShoppingBasket, LuX } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
-const SideBarCesta = ({ onClose }) => {
+const SideBarCesta = ({ onClose, cartItems }) => {
 
     const [isOpen, setIsOpen] = useState(true);
 
@@ -36,7 +36,7 @@ const SideBarCesta = ({ onClose }) => {
                                 <div className={styles.basketInfoProduto}>
                                     <div className={styles.basketInfoWrap}>
                                         <p className={styles.produtoTitle}>Titulo do livro</p>
-                                        <a className={styles.deleteItem} href="#">Excluir</a>
+                                        <a className={styles.deleteItem} href="#" >Excluir</a>
                                     </div>
                                     <div className={styles.quantidadeProduto}>
                                         <span className={styles.basketAddRemove}>
@@ -51,6 +51,43 @@ const SideBarCesta = ({ onClose }) => {
                                 </div>
 
                             </section>
+
+                            {cartItems.map((item, index) => (
+                                <section className={styles.basketItemBook} key={index}>
+                                    <img 
+                                        src={item.image} 
+                                        alt={item.title}
+                                        className={styles.basketItemImg} 
+                                    />
+                                    <div className={styles.basketInfoProduto}>
+                                        <div className={styles.basketInfoWrap}>
+                                            <p className={styles.produtoTitle}>{item.title}</p>
+                                            <a className={styles.deleteItem} href="#">Excluir</a>
+                                        </div>
+                                        <div className={styles.quantidadeProduto}>
+                                            <span className={styles.basketAddRemove}>
+                                                <a href="#" className={styles.quantidadeMinus}>-</a>
+                                                <input className={styles.quantidadeNumber} value={1}/>
+                                                <a href="#" className={styles.quantidadePlus}>+</a>
+                                            </span>
+                                            <span className={styles.valor}>
+                                                <p>{item.price}</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </section>                               
+                            ))}
+
+{/*                         MODELO
+                            {cartItems.map((item, index) => (
+                                <div key={index}>
+                                    <img src={item.image} alt={item.title} />
+                                    <h2>{item.title}</h2>
+                                    <p>{item.price}</p>
+                                </div>
+                            ))} */}
+
                             
                             {/* <section className={styles.emptyBasket}>
                                 <div className={styles.basketIcon}>
@@ -66,7 +103,7 @@ const SideBarCesta = ({ onClose }) => {
                         <footer className={styles.basketFooter}>
                             <div className={styles.total}>
                                 <p>Subtotal:</p>
-                                <p>R$ 00,00</p>
+                                <p>R$ 0,00</p>
                             </div>
                             <div className={styles.purchaseBtn}>
                                 <a href="#">Finalizar Compra</a>
@@ -79,6 +116,7 @@ const SideBarCesta = ({ onClose }) => {
 } 
 
 SideBarCesta.propTypes = {
+    cartItems: PropTypes.array.isRequired,
     onClose: PropTypes.func.isRequired,
 };
 

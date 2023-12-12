@@ -5,7 +5,9 @@ import Slider from './Slider.jsx';
 import BestSellers from './BestSellers.jsx';
 import Interest from './Interest.jsx';
 
-const HomePage = () => {
+import PropTypes from 'prop-types';
+
+const HomePage = (props) => {
 
     return (
         <>
@@ -13,7 +15,7 @@ const HomePage = () => {
 
                 <Slider/>
                 
-                <BestSellers/>
+                <BestSellers addToCart={props.addToCart}/>
 
                 <Interest/>
                 
@@ -37,5 +39,9 @@ const HomePage = () => {
         </>
     )
 }
+
+HomePage.propTypes = {
+    addToCart: PropTypes.func.isRequired,
+};
 
 export default HomePage;
