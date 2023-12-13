@@ -57,7 +57,16 @@
 }
 
 .produtoTitle {
+    display: inline-block;
     font-size: 0.9rem;
+}
+
+.deleteItem {
+    text-decoration: none;
+    padding-left: 10px;
+}
+.deleteItem:hover {
+    text-decoration: underline;
 }
 
 .quantidadeProduto {

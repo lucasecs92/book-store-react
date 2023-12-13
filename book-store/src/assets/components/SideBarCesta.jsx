@@ -1,16 +1,22 @@
 import { useState } from 'react';
 import styles from '../css/SideBarCesta.module.css'
 
-import { LuShoppingBasket, LuX } from "react-icons/lu";
+// import { LuShoppingBasket, LuX } from "react-icons/lu";
+import { LuX } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
-const SideBarCesta = ({ onClose, cartItems }) => {
+const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
 
     const [isOpen, setIsOpen] = useState(true);
 
     const handleCloseClick = () => {
         setIsOpen(false);
         onClose();
+    };
+
+    const handleRemoveClick = (event, item) => {
+        event.preventDefault();
+        onRemoveItem(item);
     };
 
     return isOpen ? (
@@ -45,7 +51,7 @@ const SideBarCesta = ({ onClose, cartItems }) => {
                                             <a href="#" className={styles.quantidadePlus}>+</a>
                                         </span>
                                         <span className={styles.valor}>
-                                            <p>$100,00</p>
+                                            <p>R$0,00</p>
                                         </span>
                                     </div>
                                 </div>
@@ -62,7 +68,13 @@ const SideBarCesta = ({ onClose, cartItems }) => {
                                     <div className={styles.basketInfoProduto}>
                                         <div className={styles.basketInfoWrap}>
                                             <p className={styles.produtoTitle}>{item.title}</p>
-                                            <a className={styles.deleteItem} href="#">Excluir</a>
+                                            <a 
+                                            className={styles.deleteItem} 
+                                            href="#"
+                                            onClick={(event) => handleRemoveClick(event, item)}
+                                            >
+                                                Excluir
+                                            </a>
                                         </div>
                                         <div className={styles.quantidadeProduto}>
                                             <span className={styles.basketAddRemove}>
@@ -118,6 +130,7 @@ const SideBarCesta = ({ onClose, cartItems }) => {
 SideBarCesta.propTypes = {
     cartItems: PropTypes.array.isRequired,
     onClose: PropTypes.func.isRequired,
+    onRemoveItem: PropTypes.func.isRequired,
 };
 
 export default SideBarCesta; 

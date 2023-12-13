@@ -11,6 +11,10 @@ import PropTypes from 'prop-types';
 
 const NavBar = (props) => {
 
+    const onRemoveItem = (itemToRemove) => {
+        props.setCartItems(prevItems => prevItems.filter(item => item.id !== itemToRemove.id));
+    };
+
     const sidebarRef = useRef(null);
 
     const [showSideBarCesta, setShowSideBarCesta] = useState(false);
@@ -152,7 +156,7 @@ const NavBar = (props) => {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)', // para adicionar um fundo escurecido
                 zIndex: 9999, // para garantir que o SideBarCesta apareça por cima de todos os outros componentes
             }}>
-                <SideBarCesta onClose={handleCartClick} cartItems={props.cartItems}/>
+                <SideBarCesta onClose={handleCartClick} cartItems={props.cartItems} onRemoveItem={onRemoveItem}/>
                 <section className={styles.closeLoginBtn} onClick={handleCartClick}>
                     <FaTimes/>
                 </section>
@@ -164,6 +168,7 @@ const NavBar = (props) => {
 
 NavBar.propTypes = {
     cartItems: PropTypes.array.isRequired,
+    setCartItems: PropTypes.func.isRequired,
 };
 
 export default NavBar;

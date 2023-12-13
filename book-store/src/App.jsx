@@ -18,7 +18,7 @@ function App() {
     <>
       <section className={styles.containerApp}>
           <header>
-            <NavBar cartItems={cartItems}/>
+            <NavBar cartItems={cartItems} setCartItems={setCartItems}/>
           </header>
           <main>
             <HomePage addToCart={addToCart}/>
