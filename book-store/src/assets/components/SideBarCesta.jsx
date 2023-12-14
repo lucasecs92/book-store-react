@@ -5,7 +5,7 @@ import styles from '../css/SideBarCesta.module.css'
 import { LuX } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
-const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
+const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
 
     const [isOpen, setIsOpen] = useState(true);
 
@@ -19,6 +19,23 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
         onRemoveItem(item);
     };
 
+    const subtotal = cartItems.reduce((total, item) => total + (Number(item.price.replace('R$', '')) * item.quantity), 0);
+
+    const handleIncreaseQuantity = (item) => {
+        const newCartItems = cartItems.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+        );
+        setCartItems(newCartItems);
+    };
+
+    const handleDecreaseQuantity = (item) => {
+        const newCartItems = cartItems.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, quantity: Math.max(1, cartItem.quantity - 1) } : cartItem
+        );
+        setCartItems(newCartItems);
+    };
+      
+    
     return isOpen ? (
         <>
             <section className={styles.basketContainer}>
@@ -33,7 +50,7 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
                         </header>
                         <main className={styles.basketItems}>
 
-                            <section className={styles.basketItemBook}>
+                            {/* <section className={styles.basketItemBook}>
                                 <img 
                                     src="#" 
                                     alt="IMAGEM"
@@ -55,8 +72,7 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
                                         </span>
                                     </div>
                                 </div>
-
-                            </section>
+                            </section> */}
 
                             {cartItems.map((item, index) => (
                                 <section className={styles.basketItemBook} key={index}>
@@ -78,12 +94,12 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
                                         </div>
                                         <div className={styles.quantidadeProduto}>
                                             <span className={styles.basketAddRemove}>
-                                                <a href="#" className={styles.quantidadeMinus}>-</a>
-                                                <input className={styles.quantidadeNumber} value={1}/>
-                                                <a href="#" className={styles.quantidadePlus}>+</a>
+                                                <a href="#" className={styles.quantidadeMinus} onClick={() => handleDecreaseQuantity(item)}>-</a>
+                                                <input className={styles.quantidadeNumber} value={item.quantity}/>
+                                                <a href="#" className={styles.quantidadePlus} onClick={() => handleIncreaseQuantity(item)}>+</a>
                                             </span>
                                             <span className={styles.valor}>
-                                                <p>{item.price}</p>
+                                            <p>{`R$ ${(Number(item.price.replace('R$', '')) * item.quantity).toFixed(2)}`}</p>
                                             </span>
                                         </div>
                                     </div>
@@ -114,8 +130,8 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem }) => {
 
                         <footer className={styles.basketFooter}>
                             <div className={styles.total}>
-                                <p>Subtotal:</p>
-                                <p>R$ 0,00</p>
+                                <h3>Subtotal:</h3>
+                                <p>R$ {subtotal.toFixed(2)}</p>
                             </div>
                             <div className={styles.purchaseBtn}>
                                 <a href="#">Finalizar Compra</a>
@@ -131,6 +147,7 @@ SideBarCesta.propTypes = {
     cartItems: PropTypes.array.isRequired,
     onClose: PropTypes.func.isRequired,
     onRemoveItem: PropTypes.func.isRequired,
+    setCartItems: PropTypes.func.isRequired,
 };
 
 export default SideBarCesta; 

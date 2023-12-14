@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 const NavBar = (props) => {
 
-    const onRemoveItem = (itemToRemove) => {
+    const handleRemoveItem = (itemToRemove) => {
         props.setCartItems(prevItems => prevItems.filter(item => item.id !== itemToRemove.id));
     };
 
@@ -156,7 +156,7 @@ const NavBar = (props) => {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)', // para adicionar um fundo escurecido
                 zIndex: 9999, // para garantir que o SideBarCesta apareça por cima de todos os outros componentes
             }}>
-                <SideBarCesta onClose={handleCartClick} cartItems={props.cartItems} onRemoveItem={onRemoveItem}/>
+                <SideBarCesta onClose={handleCartClick} setCartItems={props.setCartItems} cartItems={props.cartItems} onRemoveItem={handleRemoveItem}/>
                 <section className={styles.closeLoginBtn} onClick={handleCartClick}>
                     <FaTimes/>
                 </section>

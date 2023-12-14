@@ -11,7 +11,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (book) => {
-    setCartItems((prevItems) => [...prevItems, book]);
+    setCartItems((prevItems) => [...prevItems, { ...book, quantity: 1 }]);
   };
   
   return (
