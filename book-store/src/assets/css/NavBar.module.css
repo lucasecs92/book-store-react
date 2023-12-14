@@ -154,18 +154,29 @@
 .navLogin svg,
 .navCart svg {
     font-size: 1.8rem;
+    color: var(--gray);
 }
 
 .navLogin a,
 .navCart a {
     text-decoration: none;
-    color: var(--navy);
+    color: var(--gray);
+}
+
+.notification {
+    position: absolute;
+    top: 25px;
+    right: 110px;
+    padding: 0px 7px;
+    border-radius: 50%;
+    background-color: rgba(253, 5, 5, 0.616);
+    color: white;
 }
 
 .dividingLineNav {
     height: 30px;
     width: 100%;
-    background-color: var(--gray);
+    background-color: var(--blue);
 }
 
 .closeLoginBtn {

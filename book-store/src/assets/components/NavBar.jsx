@@ -111,8 +111,11 @@ const NavBar = (props) => {
                             <aside><User/></aside>
                             <a href="#">Entrar</a>
                         </li>
-                        <li className={styles.navCart} onClick={handleCartClick}>
+                        <li className={styles.navCart} onClick={(event) => {event.preventDefault(); handleCartClick();}}>
                             <aside><Basket /></aside>
+                            {props.cartItems.reduce((total, item) => total + item.quantity, 0) > 0 && 
+                                <span className={styles.notification}>{props.cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
+                            }
                             <a href="#">Cesta</a>
                         </li>
                     </ul>

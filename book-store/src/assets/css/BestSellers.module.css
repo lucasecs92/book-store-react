@@ -68,6 +68,7 @@
 }
 
 .slideBookBtn {
+    box-sizing: border-box;
     text-decoration: none;
     padding: 10px 4.4rem;
     border: 1px solid var(--blue);
@@ -75,6 +76,23 @@
     color: var(--blue);
     transition: .2s all ease-in-out;
     font-weight: 500;
+
+    width: 85%; /* Ajuste para o tamanho desejado */
+    height: 40px; /* Ajuste para o tamanho desejado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideBookBtn svg {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1330px) {
+    
+    .slideBookBtn {
+        width: 80%;
+    }
 }
 
 @media (max-width: 803px) {
@@ -82,11 +100,18 @@
     .inner:hover {
         box-shadow: none;
     } 
+    .slideBookBtn {
+        width: 45%;
+    }
     
 }
 @media (max-width: 506px) {
 
     .bestSellers {
         padding: 0;
+    }
+
+    .slideBookBtn {
+        width: 65%;
     }
 }

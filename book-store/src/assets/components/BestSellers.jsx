@@ -15,8 +15,11 @@ import image9 from '../images/book9.jpg';
 import image10 from '../images/book10.jpg';
 
 import PropTypes from 'prop-types';
+import { LuPlusCircle } from "react-icons/lu";
 
 const BestSellers = (props) => {
+
+    const [hover, setHover] = useState({});
 
     const [slidesPerView, setSlidePerView] = useState(4);
 
@@ -105,7 +108,12 @@ const BestSellers = (props) => {
                                                {book.price}
                                             </p>
                                         </aside>
-                                        <a href="#" className={styles.slideBookBtn} aria-label={`Comprar ${book.title}`} onClick={() => props.addToCart(book)}>COMPRAR</a>
+                                        <a href="#" className={styles.slideBookBtn} aria-label={`Comprar ${book.title}`} 
+                                        onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
+                                        onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
+                                        onClick={(event) => {event.preventDefault(); props.addToCart(book);}}>
+                                        {hover[book.id] ? <LuPlusCircle/> : "COMPRAR"}
+                                        </a>
                                     </section>
                                 </SwiperSlide>
                             )
