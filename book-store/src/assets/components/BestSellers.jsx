@@ -89,7 +89,6 @@ const BestSellers = (props) => {
                         
                         {books.map((book) => {
                             return (
-
                                 <SwiperSlide key={book.id}>
                                     <section className={styles.inner}>
                                         <img

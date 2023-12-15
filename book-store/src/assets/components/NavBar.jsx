@@ -12,6 +12,8 @@ import PropTypes from 'prop-types';
 
 const NavBar = (props) => {
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const [showDividingLineNav, setShowDividingLineNav] = useState(false);
 
     const handleRemoveItem = (itemToRemove) => {
@@ -126,11 +128,14 @@ const NavBar = (props) => {
 
                     </ul>
                 </nav>
-            </nav>
+            </nav>        
 
-            <menu className={styles.hamburguerMenu} onClick={() => setShowDividingLineNav(prevState => !prevState)}>
-                <FaBars />
-            </menu>   
+            <menu className={styles.hamburguerMenu} onClick={() => {
+                setIsMenuOpen(prevState => !prevState);
+                setShowDividingLineNav(prevState => !prevState);
+            }}>
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </menu> 
 
             <nav className={`${styles.dividingLineNav} ${showDividingLineNav ? styles.show : ''}`}>
                 <ul className={styles.dividingLineNavUl}>
@@ -138,13 +143,13 @@ const NavBar = (props) => {
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">Mais Vendidos</a>
-                    </li>
-                    <li>
                         <a href="#">Lançamentos</a>
                     </li>
                     <li>
                         <a href="#">Inscreva-se</a>
+                    </li>
+                    <li>
+                        <a href="#">Mais Vendidos</a>
                     </li>
                     <li>
                         <a href="#">Download App</a>

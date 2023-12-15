@@ -3,6 +3,8 @@ import styles from '../css/SideBarCesta.module.css'
 
 // import { LuShoppingBasket, LuX } from "react-icons/lu";
 import { LuX } from "react-icons/lu";
+import { FaTimesCircle } from "react-icons/fa";
+
 import PropTypes from 'prop-types';
 
 const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
@@ -89,7 +91,7 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                                             href="#"
                                             onClick={(event) => handleRemoveClick(event, item)}
                                             >
-                                                Excluir
+                                               <FaTimesCircle />
                                             </a>
                                         </div>
                                         <div className={styles.quantidadeProduto}>
@@ -129,13 +131,15 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                         </main>
 
                         <footer className={styles.basketFooter}>
-                            <div className={styles.total}>
-                                <h3>Subtotal:</h3>
-                                <p>R$ {subtotal.toFixed(2)}</p>
-                            </div>
-                            <div className={styles.purchaseBtn}>
-                                <a href="#">Finalizar Compra</a>
-                            </div>
+                            <section className={styles.basketFooterInner}>
+                                <div className={styles.total}>
+                                    <h3>Subtotal:</h3>
+                                    <p>R$ {subtotal.toFixed(2)}</p>
+                                </div>
+                                <div className={styles.purchaseBtn}>
+                                    <a href="#">Finalizar Compra</a>
+                                </div>
+                            </section>
                         </footer>
                 </section>
             </section>

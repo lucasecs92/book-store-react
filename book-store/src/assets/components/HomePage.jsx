@@ -15,9 +15,7 @@ const HomePage = (props) => {
 
                 <Slider/>
                 
-                <BestSellers addToCart={props.addToCart}/>
-
-                <Release/>
+                <Release addToCart={props.addToCart}/>
                 
                 <section className={styles.newsletter}>
                     <h3>Subscribe To Our Newsletter</h3>
@@ -35,6 +33,8 @@ const HomePage = (props) => {
                         </div>
                     </form>
                 </section>
+
+                <BestSellers addToCart={props.addToCart}/>
             </section>
         </>
     )

@@ -1,9 +1,10 @@
 .basketContainer {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-    width: 27%;
+    width: 27vw;
     max-width: 400px;
     min-width: 280px;
     z-index: 1;
@@ -21,6 +22,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
+
+    position: fixed;
+    width: 27vw;
 } 
 
 .closeHeaderBtn {
@@ -31,7 +35,9 @@
 .basketItems {
     height: 100%;
     padding: 0 15px;
+    padding-top: 56px;
 }
+
 .basketItemBook {
     display: flex;
     padding: 1rem 0;
@@ -60,9 +66,12 @@
 .deleteItem {
     text-decoration: none;
     padding-left: 10px;
+    font-size: 1.5rem;
+    color: var(--lightgray);
 }
+
 .deleteItem:hover {
-    text-decoration: underline;
+    color: rgba(255, 0, 0, 0.589);
 }
 
 .quantidadeProduto {
@@ -98,8 +107,8 @@
     flex-direction: column;
     border-top: 1px solid var(--lightgray);
 
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 100vw;
     bottom: 0;
 }
 
@@ -107,11 +116,13 @@
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    background-color: var(--beige);
+    width: 27vw;
 }
 
 .purchaseBtn {
     text-transform: uppercase;
-    width: 100%;
+    width: 27vw;
     background-color: var(--blue);
     padding: 0.7rem;
     font-size: 1rem;
