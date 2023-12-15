@@ -5,7 +5,7 @@ const Release = () => {
     return (
         <>
             <section className={styles.releaseContainer}>
-
+                <h3 className={styles.title}>Lançamentos</h3>
             </section>
         </>   
     )

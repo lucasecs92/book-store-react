@@ -84,15 +84,13 @@
 @media (max-width: 980px) {
 
     .billboard {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: stretch;
         padding: 150px 80px 60px 80px;
     }
 
     .bannerInfo {
         text-align: center;
         margin-top: 35px;
+        font-size: 0.8rem;
     }
 
     .btnWrap {
@@ -102,6 +100,15 @@
     
     .slideImg {
         padding-left: 0;
+    }
+}
+
+@media (max-width: 788px) {
+    
+    .billboard {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
     }
 }
 

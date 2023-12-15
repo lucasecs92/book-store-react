@@ -144,7 +144,7 @@ const NavBar = (props) => {
                         <a href="#">Lançamentos</a>
                     </li>
                     <li>
-                        <a href="#">Se Inscreva</a>
+                        <a href="#">Inscreva-se</a>
                     </li>
                     <li>
                         <a href="#">Download App</a>
