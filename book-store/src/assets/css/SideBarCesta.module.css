@@ -121,6 +121,11 @@
     align-items: center;
     cursor: pointer;
 }
+
+.purchaseBtn:hover {
+    background-color: var(--navy);
+}
+
 .purchaseBtn a {
     color: var(--branco);
     text-decoration: none;
