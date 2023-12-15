@@ -31,10 +31,6 @@
 .basketItems {
     height: 100%;
     padding: 0 15px;
-    /*  display: flex;
-    justify-content: center;
-    margin-top: 60%;
-    padding: 17rem 0; */
 }
 .basketItemBook {
     display: flex;
@@ -102,8 +98,8 @@
     flex-direction: column;
     border-top: 1px solid var(--lightgray);
 
-    position: fixed;
-    width: 27vw;
+    position: absolute;
+    width: 100%;
     bottom: 0;
 }
 
@@ -130,11 +126,13 @@
     text-decoration: none;
 }
 
+@media (max-width: 500px) {
 
-
-
-
-
+    .basketContainer {
+        min-width: 100vw;
+    }
+  
+}
 
 /* .emptyBasket {
     color: var(--nude);
@@ -145,3 +143,4 @@
     text-align: center;
     font-size: 5rem;
 } */
+

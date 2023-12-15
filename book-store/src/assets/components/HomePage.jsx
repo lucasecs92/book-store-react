@@ -3,7 +3,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 
 import Slider from './Slider.jsx';
 import BestSellers from './BestSellers.jsx';
-import Interest from './Interest.jsx';
+import Release from './Release.jsx';
 
 import PropTypes from 'prop-types';
 
@@ -17,7 +17,7 @@ const HomePage = (props) => {
                 
                 <BestSellers addToCart={props.addToCart}/>
 
-                <Interest/>
+                <Release/>
                 
                 <section className={styles.newsletter}>
                     <h3>Subscribe To Our Newsletter</h3>

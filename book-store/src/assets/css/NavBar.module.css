@@ -110,10 +110,6 @@
     cursor: pointer;
     background-color: var(--white);
 }
-/* 
-.searchBtn:hover {
-    background-color: var(--branco);
-} */
 
 .searchBtn svg {
     font-size: 1.5rem;
@@ -146,6 +142,10 @@
     flex-direction: column;
 }
 
+.navCart {
+    position: relative;
+}
+
 .navLogin:hover,
 .navCart:hover {
     background-color: #fff693
@@ -165,18 +165,52 @@
 
 .notification {
     position: absolute;
-    top: 25px;
-    right: 110px;
-    padding: 0px 7px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 10px;
     border-radius: 50%;
     background-color: rgba(253, 5, 5, 0.616);
     color: white;
+    font-size: 11px;
+    font-weight: 600;
+    display: grid;
+    place-content: center;
+}
+
+.hamburguerMenu {
+    display: none;
+}
+
+.show {
+    display: block !important;
 }
 
 .dividingLineNav {
-    height: 30px;
+    height: 40px;
     width: 100%;
     background-color: var(--blue);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.dividingLineNavUl {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dividingLineNavUl li {
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dividingLineNavUl li:hover {
+    background-color: var(--navy);
+}
+
+.dividingLineNavUl li a {
+    text-decoration: none;
+    color: var(--branco);
 }
 
 .closeLoginBtn {
@@ -189,6 +223,12 @@
 }
 
 /* Responsividade */
+@media (max-width: 1330px) {
+
+    .notification {
+        left: 35px;
+    }
+}
 @media (max-width: 1055px) {
     .navBarMain 
     .navSearchForm {
@@ -217,6 +257,15 @@
         grid-area: 1 / 4 / 2 / 5;
         justify-content: flex-end;
     }
+    .navLogin a,
+    .navCart a {
+        display: none;
+    }
+
+    .notification {
+        left: 30px;
+    }
+
 }
 @media (max-width: 780px) {
     
@@ -241,16 +290,27 @@
         font-size: 1.8rem;
     }
 
-    .navLogin a,
-    .navCart a {
-        display: none;
-    }
-
     .navLogo {
         width: 100%;
     }
 
+    .notification {
+        left: 22px;
+    }
+
+    .dividingLineNavUl {
+        font-size: 0.9rem;
+    }
+
 }
+
+@media (max-width: 606px) {
+
+    .dividingLineNavUl {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 500px) {
     .navLogin, 
     .navCart {
@@ -264,4 +324,40 @@
     .searchField {
         font-size: 0.9rem;
     }
+
+    .hamburguerMenu {
+        background-color: var(--blue);
+        color: var(--branco);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .hamburguerMenu:hover {
+        background-color: var(--navy);
+    }
+
+    .dividingLineNav {
+        height: 185px;
+        display: none;
+        opacity: 0.9;
+    }
+
+    .dividingLineNavUl {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.950rem;
+        padding: 0;
+    }
+    
+    .dividingLineNavUl li {
+        padding: 10px;
+        cursor: pointer;
+    }
+    .dividingLineNavUl li:hover {
+        width: 100%;
+        text-align: center;
+    }
+
 }

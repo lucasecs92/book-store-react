@@ -3,13 +3,16 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Basket, MagnifyingGlass, User } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
+import { FaBars, FaCaretDown, FaTimes } from 'react-icons/fa';
+
 import FormLogin from './FormLogin.jsx';
-import { FaCaretDown, FaTimes } from 'react-icons/fa';
 import SideBarCesta from './SideBarCesta.jsx';
 
 import PropTypes from 'prop-types';
 
 const NavBar = (props) => {
+
+    const [showDividingLineNav, setShowDividingLineNav] = useState(false);
 
     const handleRemoveItem = (itemToRemove) => {
         props.setCartItems(prevItems => prevItems.filter(item => item.id !== itemToRemove.id));
@@ -107,10 +110,12 @@ const NavBar = (props) => {
 
                 <nav className={styles.navRight}>
                     <ul className={styles.navRightUl}>
+
                         <li className={styles.navLogin} onClick={handleLoginClick}>
                             <aside><User/></aside>
                             <a href="#">Entrar</a>
                         </li>
+
                         <li className={styles.navCart} onClick={(event) => {event.preventDefault(); handleCartClick();}}>
                             <aside><Basket /></aside>
                             {props.cartItems.reduce((total, item) => total + item.quantity, 0) > 0 && 
@@ -118,11 +123,33 @@ const NavBar = (props) => {
                             }
                             <a href="#">Cesta</a>
                         </li>
+
                     </ul>
                 </nav>
             </nav>
 
-            <nav className={styles.dividingLineNav}>
+            <menu className={styles.hamburguerMenu} onClick={() => setShowDividingLineNav(prevState => !prevState)}>
+                <FaBars />
+            </menu>   
+
+            <nav className={`${styles.dividingLineNav} ${showDividingLineNav ? styles.show : ''}`}>
+                <ul className={styles.dividingLineNavUl}>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Mais Vendidos</a>
+                    </li>
+                    <li>
+                        <a href="#">Lançamentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Se Inscreva</a>
+                    </li>
+                    <li>
+                        <a href="#">Download App</a>
+                    </li>
+                </ul>
             </nav>
         </section>
 
