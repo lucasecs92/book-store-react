@@ -4,9 +4,9 @@
     right: 0;
     top: 0;
     height: 100%;
-    width: 27vw;
-    max-width: 400px;
-    min-width: 280px;
+    width: 350px;
+    /* max-width: 400px;
+    min-width: 280px; */
     z-index: 1;
     background-color: var(--branco);
     transition: .5s ease;
@@ -24,7 +24,7 @@
     padding: 0 15px;
 
     position: fixed;
-    width: 27vw;
+    width: 350px;
 } 
 
 .closeHeaderBtn {
@@ -117,12 +117,12 @@
     justify-content: space-between;
     padding: 25px;
     background-color: var(--beige);
-    width: 27vw;
+    width: 350px;
 }
 
 .purchaseBtn {
     text-transform: uppercase;
-    width: 27vw;
+    width: 350px;
     background-color: var(--blue);
     padding: 0.7rem;
     font-size: 1rem;
@@ -141,22 +141,33 @@
     color: var(--branco);
     text-decoration: none;
 }
+ 
+.emptyBasket {
+    color: var(--nude);
+    padding: 250px 0;
+}
+
+.emptyBasketIcon {
+    font-size: 4.5rem;
+}
+
+.emptyBasketIcon, .emptyBasketText {
+    text-align: center;
+} 
 
 @media (max-width: 500px) {
 
     .basketContainer {
-        min-width: 100vw;
+        width: 100vw;
+    }
+    .basketHeader {
+        width: 100vw;
+    }
+    .total {
+        width: 100vw;
+    }
+    .purchaseBtn {
+        width: 100vw;
     }
   
 }
-
-/* .emptyBasket {
-    color: var(--nude);
-    position: fixed;
-}
-
-.basketIcon {
-    text-align: center;
-    font-size: 5rem;
-} */
-

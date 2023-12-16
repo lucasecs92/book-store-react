@@ -191,7 +191,12 @@ const NavBar = (props) => {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)', // para adicionar um fundo escurecido
                 zIndex: 9999, // para garantir que o SideBarCesta apareça por cima de todos os outros componentes
             }}>
-                <SideBarCesta onClose={handleCartClick} setCartItems={props.setCartItems} cartItems={props.cartItems} onRemoveItem={handleRemoveItem}/>
+                <SideBarCesta 
+                    onClose={handleCartClick} 
+                    setCartItems={props.setCartItems} 
+                    cartItems={props.cartItems} 
+                    onRemoveItem={handleRemoveItem}
+                />
                 <section className={styles.closeLoginBtn} onClick={handleCartClick}>
                     <FaTimes/>
                 </section>

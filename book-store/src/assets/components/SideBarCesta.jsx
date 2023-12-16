@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import styles from '../css/SideBarCesta.module.css'
 
-// import { LuShoppingBasket, LuX } from "react-icons/lu";
-import { LuX } from "react-icons/lu";
+import { LuShoppingBasket, LuX } from "react-icons/lu";
 import { FaTimesCircle } from "react-icons/fa";
 
 import PropTypes from 'prop-types';
@@ -50,32 +49,8 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                                 <LuX />
                             </div>
                         </header>
+
                         <main className={styles.basketItems}>
-
-                            {/* <section className={styles.basketItemBook}>
-                                <img 
-                                    src="#" 
-                                    alt="IMAGEM"
-                                    className={styles.basketItemImg} 
-                                />
-                                <div className={styles.basketInfoProduto}>
-                                    <div className={styles.basketInfoWrap}>
-                                        <p className={styles.produtoTitle}>Titulo do livro</p>
-                                        <a className={styles.deleteItem} href="#" >Excluir</a>
-                                    </div>
-                                    <div className={styles.quantidadeProduto}>
-                                        <span className={styles.basketAddRemove}>
-                                            <a href="#" className={styles.quantidadeMinus}>-</a>
-                                            <input className={styles.quantidadeNumber} value={1}/>
-                                            <a href="#" className={styles.quantidadePlus}>+</a>
-                                        </span>
-                                        <span className={styles.valor}>
-                                            <p>R$0,00</p>
-                                        </span>
-                                    </div>
-                                </div>
-                            </section> */}
-
                             {cartItems.map((item, index) => (
                                 <section className={styles.basketItemBook} key={index}>
                                     <img 
@@ -109,37 +84,30 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                                 </section>                               
                             ))}
 
-{/*                         MODELO
-                            {cartItems.map((item, index) => (
-                                <div key={index}>
-                                    <img src={item.image} alt={item.title} />
-                                    <h2>{item.title}</h2>
-                                    <p>{item.price}</p>
-                                </div>
-                            ))} */}
-
-                            
-                            {/* <section className={styles.emptyBasket}>
-                                <div className={styles.basketIcon}>
-                                    <LuShoppingBasket/>
-                                </div>
-                                <div className={styles.emptyText}>
-                                    <p>Sua cesta está vazia</p>
-                                </div>
-                            </section> */}
-
+                            {cartItems.length === 0 && (
+                                <section className={styles.emptyBasket}>
+                                    <div className={styles.emptyBasketIcon}>
+                                        <LuShoppingBasket/>
+                                    </div>
+                                    <div className={styles.emptyBasketText}>
+                                        <p>Sua cesta está vazia</p>
+                                    </div>
+                                </section>
+                            )}
                         </main>
 
                         <footer className={styles.basketFooter}>
-                            <section className={styles.basketFooterInner}>
-                                <div className={styles.total}>
-                                    <h3>Subtotal:</h3>
-                                    <p>R$ {subtotal.toFixed(2)}</p>
-                                </div>
-                                <div className={styles.purchaseBtn}>
-                                    <a href="#">Finalizar Compra</a>
-                                </div>
-                            </section>
+                            {cartItems.length > 0 && (
+                                <section className={styles.basketFooterInner}>
+                                    <div className={styles.total}>
+                                        <h3>Subtotal:</h3>
+                                        <p>R$ {subtotal.toFixed(2)}</p>
+                                    </div>
+                                    <div className={styles.purchaseBtn}>
+                                        <a href="#">Finalizar Compra</a>
+                                    </div>
+                                </section>
+                            )}
                         </footer>
                 </section>
             </section>

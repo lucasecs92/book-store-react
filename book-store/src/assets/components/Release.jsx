@@ -49,7 +49,10 @@ const Release = (props) => {
                                 <a href="#" className={styles.releaseBookBtn} 
                                 onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
                                 onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
-                                onClick={(event) => {event.preventDefault(); props.addToCart(book);}}>
+                                onClick={(event) => {
+                                    event.preventDefault(); 
+                                    props.addToCart(book);
+                                }}>
                                 {hover[book.id] ? <LuPlusCircle/> : "COMPRAR"}
                                 </a>
                             </section>
