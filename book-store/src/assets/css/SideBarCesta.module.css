@@ -157,15 +157,9 @@
 
 @media (max-width: 500px) {
 
-    .basketContainer {
-        width: 100vw;
-    }
-    .basketHeader {
-        width: 100vw;
-    }
-    .total {
-        width: 100vw;
-    }
+    .basketContainer,
+    .basketHeader,
+    .total, 
     .purchaseBtn {
         width: 100vw;
     }

@@ -3,7 +3,7 @@
     height: 175vh;
     background-color: var(--lightpink);
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 6.25rem;
     padding-top: 30px;
 }
 
@@ -22,7 +22,7 @@
 
     overflow: hidden;
     text-align: center;
-    margin: 0.6rem;
+    /* margin: 0.6rem; */
 }
 
 .inner {
@@ -94,31 +94,33 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
 
     .releaseContainer {
-       height: 210vh;
+       height: 215vh;
     }  
-}
+} */
 
 @media (max-width: 1330px) {
 
     .releaseContainer {
-        height: 190vh;
+        height: 155vh;
     }
 }
 
 @media (max-width: 1130px) {
 
     .releaseContainer {
-        padding: 0 60px;
+        height: 100%;
+        padding: 0 3rem;
     }
+
 }
 
 @media (max-width: 993px) {
 
     .releaseContainer {
-        height: 290vh;
+        padding: 0 3.5rem;
     }
 
     .inner {
@@ -132,5 +134,63 @@
     .releaseBookImg {
         width: 20vw;
     }
+
+    .releaseBookBtn {
+        font-size: 0.8rem;
+    }
+
 }
 
+/* @media screen and (min-width: 790px) and (max-width: 993px) {
+    .inner:hover {
+        box-shadow: none;
+    } 
+} */
+@media (max-width: 790px) {
+
+    .releaseContainer {
+        padding: 0px 3rem;
+    }
+
+    .inner:hover {
+        box-shadow: none;
+    } 
+
+    .inner {
+        margin: 5rem;
+    } 
+}
+
+@media (max-width: 660px) {
+
+    .releaseContainer {
+        padding: 0px 1.5rem;
+    }
+
+    .inner {
+        margin: 3rem 4rem;
+    } 
+}
+
+/* @media screen and (min-width: 500px) and (max-width: 790px) {} */
+@media (max-width: 506px) {
+    
+    .releaseContainer {
+        padding: 0px 40px;
+    }
+
+    .releaseBooks {
+        width: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .inner {
+        width: 33vw;
+    }
+
+    .releaseBookImg {
+        width: 35vw;
+    }
+
+}
