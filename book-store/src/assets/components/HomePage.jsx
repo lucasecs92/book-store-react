@@ -18,7 +18,7 @@ const HomePage = (props) => {
                 
                 <Release addToCart={props.addToCart}/>
                 
-                <section className={styles.newsletter}>
+                <section className={styles.newsletter} id='newsletter'>
                     <h3>Subscribe To Our Newsletter</h3>
                     <form className={styles.newsletterForm}>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nihil velit suscipit, corporis dignissimos asperiores iste ipsa ducimus.</p>

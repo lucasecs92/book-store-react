@@ -16,7 +16,6 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Release = (props) => {
 
-    
     const books = [
         { id: 1, image: releaseBook1, title: 'The Gestures of LOVE', author: 'Jane Goodall', price: 'R$24.00' },
         { id: 2, image: releaseBook2, title: 'The Garden', author: 'Wolfgang Ernst Pauli', price: 'R$35.00' },
@@ -34,7 +33,7 @@ const Release = (props) => {
 
     return (
         <>
-            <section className={styles.releaseContainer}>
+            <section className={styles.releaseContainer} id='release'>
                 <h3 className={styles.title}>Lançamentos</h3>
                 <section className={styles.releaseBooks}>
                     {books.slice(0, displayCount).map((book) => (

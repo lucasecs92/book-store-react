@@ -71,6 +71,14 @@ const NavBar = (props) => {
         };
     }, []);
 
+    const handleNavigationClick = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
       <>
         <section className={styles.wrapNav}>
@@ -140,19 +148,19 @@ const NavBar = (props) => {
             <nav className={`${styles.dividingLineNav} ${showDividingLineNav ? styles.show : ''}`}>
                 <ul className={styles.dividingLineNavUl}>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#sliderHome" onClick={(event) => handleNavigationClick(event, 'sliderHome')}>Home</a>
                     </li>
                     <li>
-                        <a href="#">Lançamentos</a>
+                        <a href="#release" onClick={(event) => handleNavigationClick(event, 'release')}>Lançamentos</a>
                     </li>
                     <li>
-                        <a href="#">Inscreva-se</a>
+                        <a href="#newsletter" onClick={(event) => handleNavigationClick(event, 'newsletter')}>Inscreva-se</a>
                     </li>
                     <li>
-                        <a href="#">Mais Vendidos</a>
+                        <a href="#bestSellers" onClick={(event) => handleNavigationClick(event, 'bestSellers')}>Mais Vendidos</a>
                     </li>
                     <li>
-                        <a href="#">Download App</a>
+                        <a href="#downloadApp" onClick={(event) => handleNavigationClick(event, 'downloadApp')}>Download App</a>
                     </li>
                 </ul>
             </nav>

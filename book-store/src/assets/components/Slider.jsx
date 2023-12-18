@@ -22,7 +22,7 @@ const Slider = () => {
 
     return (
         <>
-            <section className={styles.slider}>
+            <section className={styles.slider} id='sliderHome'>
                 <Swiper
                     // modules={[EffectFade]}
                     // effect="fade"

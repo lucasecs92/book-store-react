@@ -72,7 +72,7 @@ const BestSellers = (props) => {
 
     return (
         <>
-            <section className={styles.bestSellers}>
+            <section className={styles.bestSellers} id='bestSellers'>
                 <h3 className={styles.title}>Mais Vendidos</h3>
 
                 <section className={styles.slideBook}>

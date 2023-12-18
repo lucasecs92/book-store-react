@@ -8,7 +8,7 @@ const DownloadApp = () => {
 
     return (
         <>
-            <section className={styles.downloadApp}>
+            <section className={styles.downloadApp} id='downloadApp'>
                 <section className={styles.downloadAppWrap}>
 
                     <div className={styles.downloadAppTelefone}>
