@@ -9,9 +9,6 @@ const Footer = () => {
         <>
             <section className={styles.footer}>
 
-                <section className={styles.dividingLine}>
-                </section>
-
                 <section className={styles.mainFooter}>
                     <aside className={styles.companyBrand}>
                         <a className={styles.logo} href="#">

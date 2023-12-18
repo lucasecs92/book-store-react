@@ -12,9 +12,11 @@ import releaseBook5 from '../images/release-book5.jpg';
 import releaseBook6 from '../images/release-book6.jpg';
 import releaseBook7 from '../images/release-book7.jpg';
 import releaseBook8 from '../images/release-book8.jpg';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Release = (props) => {
 
+    
     const books = [
         { id: 1, image: releaseBook1, title: 'The Gestures of LOVE', author: 'Jane Goodall', price: 'R$24.00' },
         { id: 2, image: releaseBook2, title: 'The Garden', author: 'Wolfgang Ernst Pauli', price: 'R$35.00' },
@@ -26,6 +28,8 @@ const Release = (props) => {
         { id: 8, image: releaseBook8, title: 'Minimalist Art', author: 'Niels Bohr', price: 'R$40.00' },
     ]
 
+    const [displayCount, setDisplayCount] = useState(books.length / 2);
+    // const [displayCount, setDisplayCount] = useState(Math.ceil(books.length / 2));
     const [hover, setHover] = useState({});
 
     return (
@@ -33,7 +37,7 @@ const Release = (props) => {
             <section className={styles.releaseContainer}>
                 <h3 className={styles.title}>Lançamentos</h3>
                 <section className={styles.releaseBooks}>
-                    {books.map((book) => (
+                    {books.slice(0, displayCount).map((book) => (
                             <section key={book.id} className={styles.inner}>
                                 <img
                                 src={book.image}
@@ -58,6 +62,14 @@ const Release = (props) => {
                             </section>
                     ))}                            
                 </section>
+
+                {displayCount < books.length && (
+                    <span className={styles.viewMoreWrap} onClick={() => setDisplayCount(books.length)}>
+                        <p>View More</p>
+                        <FaArrowRightLong/>
+                    </span>
+                )}
+
             </section>
         </>   
     )

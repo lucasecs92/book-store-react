@@ -72,7 +72,7 @@
 .slideBookBtn {
     box-sizing: border-box;
     text-decoration: none;
-    padding: 10px 4.4rem;
+    /* padding: 10px 4.4rem; */
     border: 1px solid var(--blue);
     border-radius: 5px;
     color: var(--blue);
@@ -92,15 +92,22 @@
 
 @media (max-width: 1400px) {
 
- .bestSellers {
-    height: 115vh;
- }  
+    .bestSellers {
+        height: 100vh;
+    }  
 }
 
 @media (max-width: 1330px) {
     
     .slideBookBtn {
         width: 80%;
+    }
+}
+
+@media (max-width: 903px) {
+
+    .slideBookBtn {
+        font-size: 0.9rem;
     }
 }
 
@@ -118,9 +125,11 @@
 
     .bestSellers {
         padding: 0;
+        height: auto;
     }
 
     .slideBookBtn {
         width: 65%;
     }
+    
 }

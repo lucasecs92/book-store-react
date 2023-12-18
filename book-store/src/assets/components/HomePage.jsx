@@ -6,6 +6,7 @@ import BestSellers from './BestSellers.jsx';
 import Release from './Release.jsx';
 
 import PropTypes from 'prop-types';
+import DownloadApp from './DownloadApp.jsx';
 
 const HomePage = (props) => {
 
@@ -35,6 +36,8 @@ const HomePage = (props) => {
                 </section>
 
                 <BestSellers addToCart={props.addToCart}/>
+
+                <DownloadApp/>
             </section>
         </>
     )

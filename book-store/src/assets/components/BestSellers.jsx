@@ -19,12 +19,6 @@ import { LuPlusCircle } from "react-icons/lu";
 
 const BestSellers = (props) => {
 
-    const [hover, setHover] = useState({});
-
-    const [slidesPerView, setSlidePerView] = useState(4);
-
-    const [isNavigationEnabled, setIsNavigationEnabled] = useState(window.innerWidth > 1366);
-
     const books = [
         { id: 1, image: image1, title: 'Living Life in the Best Way', author: 'Amalia Santos', price: 'R$35.00' },
         { id: 2, image: image2, title: 'Lost in the Maze of Wonders', author: 'Third R.', price: 'R$40.00' },
@@ -38,6 +32,12 @@ const BestSellers = (props) => {
         { id: 10, image: image10, title: 'Living Alone', author: 'Alexandre Nero', price: 'R$44.00' },
     ];
 
+    const [hover, setHover] = useState({});
+
+    const [slidesPerView, setSlidePerView] = useState(4);
+
+    const [isNavigationEnabled, setIsNavigationEnabled] = useState(window.innerWidth > 1366);
+    
     useEffect(() => {
 
         function handleResize(){

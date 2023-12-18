@@ -1,0 +1,22 @@
+.downloadApp {
+    padding: 2rem;
+    background-color: var(--gray);
+}
+
+.downloadAppWrap {
+    height: 110vh;
+    padding: 5rem;
+    display: flex;
+}
+
+.downloadAppTelefone img {
+    height: 80vh;
+}
+
+.downloadAppInfo {
+    padding: 5rem;
+}
+
+.downloadAppInfo h2 {
+    font-size: 3rem;
+}
