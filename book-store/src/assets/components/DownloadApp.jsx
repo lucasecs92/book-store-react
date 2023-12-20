@@ -18,7 +18,7 @@ const DownloadApp = () => {
                     <div className={styles.downloadAppInfo}>
                         <h2>Download Our App Now!</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolore explicabo, architecto eveniet hic ipsum, ex provident omnis iste exercitationem repudiandae. At consequuntur reiciendis illo exercitationem cupiditate culpa et blanditiis.</p>
-                        <div className={styles.apps}>
+                        <div className={styles.apps}> 
                             <img src={googlePlayImg} alt="Google Play" className={styles.googlePlay}/>
                             <img src={appStoreImg} alt="App Store" className={styles.appStore}/>
                         </div>

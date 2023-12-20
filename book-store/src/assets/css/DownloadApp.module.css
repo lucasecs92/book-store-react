@@ -55,10 +55,14 @@
     .downloadAppInfo {
         padding-right: 8rem;
     }
-    
-}
-@media (max-width: 1330px) {
     .apps img {
         width: 15vw;
+    }
+    
+}
+@media (max-width: 993px) {
+    
+    .downloadAppInfo h2 {
+        font-size: 2.5rem;
     }
 }
