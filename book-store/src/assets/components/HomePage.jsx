@@ -29,7 +29,7 @@ const HomePage = (props) => {
                                 placeholder="Enter Your Email Address Here"
                             />
                             <button className={styles.newsletterBtn} type="submit">
-                                <span>SEND</span> <FaRegPaperPlane/>
+                                <span>SEND</span> <FaRegPaperPlane className={styles.newsletterIcon}/>
                             </button>
                         </div>
                     </form>

@@ -94,11 +94,20 @@
 .viewMoreWrap {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     padding: 3rem 3rem 4rem 3rem;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.2rem;
     color: var(--gray);
+}
+
+.viewMoreWrapWrap {
+    display: flex;
+    align-items: center;
+}
+
+.viewMoreWrapWrap:hover{
+    cursor: pointer;
+    color: var(--preto);
 }
 
 .viewMoreWrap p {
@@ -108,6 +117,14 @@
 .viewMoreWrap p,
 .viewMoreWrap svg {
     cursor: pointer;
+}
+
+.arrowIcon {
+    transition: transform 0.8s ease;
+}
+
+.viewMoreWrapWrap:hover .arrowIcon {
+    transform: translateX(10px);
 }
 
 @media (max-width: 1130px) {

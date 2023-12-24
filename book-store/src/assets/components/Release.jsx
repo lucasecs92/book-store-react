@@ -64,8 +64,10 @@ const Release = (props) => {
 
                 {displayCount < books.length && (
                     <span className={styles.viewMoreWrap} onClick={() => setDisplayCount(books.length)}>
-                        <p>View More</p>
-                        <FaArrowRightLong/>
+                        <div className={styles.viewMoreWrapWrap}>
+                            <p>View More</p>
+                            <FaArrowRightLong className={styles.arrowIcon}/>
+                        </div>
                     </span>
                 )}
 
