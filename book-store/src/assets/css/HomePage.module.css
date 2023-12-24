@@ -7,12 +7,12 @@
     align-items: center;
 } 
 
-.containerHome 
 .newsletter h3 {
     font-size: 2rem;
     font-family: 'Young Serif', serif;
     font-weight: 100;
     width: 50vw;
+    color: var(--preto);
 }
 
 .containerHome 
@@ -28,6 +28,7 @@
 .newsletterForm p {
     margin-bottom: 25px;
     line-height: 2rem;
+    color: var(--gray);
 }
 
 .containerInput {

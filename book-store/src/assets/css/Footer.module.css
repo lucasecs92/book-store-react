@@ -21,6 +21,7 @@
     font-family: 'Ubuntu', sans-serif;
     padding: 20px 70px;
     line-height: 1.8;
+    color: var(--preto);
 }
 
 .mainFooter
@@ -59,7 +60,7 @@
     padding-bottom: 1rem;
     font-family: 'Young Serif', serif;
     font-weight: 100;
-    color: var(--navy);
+    color: var(--preto);
 }
 .footerWrapper ul {
     list-style-type: none;  
@@ -68,7 +69,7 @@
 .footerWrapper ul li a {
     text-decoration: none;
     font-size: 0.850rem;
-    color: var(--navy);
+    color: var(--preto);
 }
 .footerWrapper ul li a:hover {
     font-weight: bold;

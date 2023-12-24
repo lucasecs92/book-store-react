@@ -14,6 +14,7 @@
     font-family: 'Young Serif', serif;
     font-size: 2rem;
     font-weight: lighter;
+    color: var(--preto);
 }
 
 .releaseBooks {
@@ -60,6 +61,7 @@
 .releaseBookTitle {
     font-size: 0.9rem;
     padding-bottom: 0.3rem;
+    color: var(--preto);
 }
 
 .releaseBookAutor {

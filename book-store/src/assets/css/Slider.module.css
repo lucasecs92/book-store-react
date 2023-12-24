@@ -1,7 +1,7 @@
 .slider {
     width: 100vw;
     background-color: var(--beige);
-    color: black;
+    color: var(--preto);
     padding: 80px;
 }
 
