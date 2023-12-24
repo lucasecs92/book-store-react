@@ -1,13 +1,10 @@
 .downloadApp {
-    background-color: var(--beige);
+    background-color: var(--lightpink);
 }
 
 .downloadAppWrap {
-    height: 130vh;
     display: flex;
     align-items: center;
-    /* padding: 20px 100px; */
-
 }
 
 .downloadAppTelefone {
@@ -17,14 +14,13 @@
 }
 
 .downloadAppTelefone img {
-    /* width: 100%; */
     height: 75vh; 
 }
 
 .downloadAppInfo {
     width: 50vw;
     margin: 10rem 0rem 10rem 5rem;
-    padding-right: 11rem;
+    padding-right: 20rem;
 }
 
 .downloadAppInfo h2 {
@@ -35,10 +31,13 @@
 .downloadAppInfo p {
     padding-top: 2.8em;
     line-height: 1.8;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--gray);
+    font-weight: 300;
 }
 
 .apps {
-    height: 10vh;
+    display: flex;
 }
 
 .apps img{
@@ -64,5 +63,44 @@
     
     .downloadAppInfo h2 {
         font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 773px) {
+
+    .downloadAppWrap {
+        flex-direction: column;
+    }
+    
+    .downloadAppTelefone {
+        margin-top: 100px;
+        justify-content: center;
+    }
+
+    .downloadAppInfo {
+        width: auto;
+        margin: 5rem 0rem 5rem 5rem;
+        padding-right: 5rem;
+        text-align: center;
+    }
+
+    .apps {
+        justify-content: space-evenly;
+    } 
+
+    .apps img {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .downloadAppInfo h2 {
+        font-size: 2rem;
+    }
+    
+    .apps img {
+        width: 30vw;
     }
 }

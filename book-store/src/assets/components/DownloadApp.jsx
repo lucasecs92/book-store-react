@@ -1,8 +1,8 @@
 import styles from '../css/DownloadApp.module.css';
 
 import telefone from '../images/mobile-bookstore.png';
-import googlePlayImg from '../images/google-play.png';
-import appStoreImg from '../images/app-store.png';
+import googlePlayImg from '../images/google-play.svg';
+import appStoreImg from '../images/app-store.svg';
 
 const DownloadApp = () => {
 

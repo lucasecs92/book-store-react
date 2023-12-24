@@ -1,16 +1,12 @@
 .basketContainer {
-    /* position: fixed; */
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     width: 350px;
-    /* max-width: 400px;
-    min-width: 280px; */
     z-index: 1;
     background-color: var(--branco);
     transition: .5s ease;
-    overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
     color: var(--gray);
 }

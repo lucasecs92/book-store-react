@@ -147,20 +147,20 @@ const NavBar = (props) => {
 
             <nav className={`${styles.dividingLineNav} ${showDividingLineNav ? styles.show : ''}`}>
                 <ul className={styles.dividingLineNavUl}>
-                    <li>
-                        <a href="#sliderHome" onClick={(event) => handleNavigationClick(event, 'sliderHome')}>Home</a>
+                    <li onClick={(event) => handleNavigationClick(event, 'sliderHome')}>
+                        <a href="#sliderHome">Home</a>
                     </li>
-                    <li>
-                        <a href="#release" onClick={(event) => handleNavigationClick(event, 'release')}>Lançamentos</a>
+                    <li onClick={(event) => handleNavigationClick(event, 'release')}>
+                        <a href="#release">Lançamentos</a>
                     </li>
-                    <li>
-                        <a href="#newsletter" onClick={(event) => handleNavigationClick(event, 'newsletter')}>Inscreva-se</a>
+                    <li onClick={(event) => handleNavigationClick(event, 'newsletter')}>
+                        <a href="#newsletter">Inscreva-se</a>
                     </li>
-                    <li>
-                        <a href="#bestSellers" onClick={(event) => handleNavigationClick(event, 'bestSellers')}>Mais Vendidos</a>
+                    <li onClick={(event) => handleNavigationClick(event, 'bestSellers')}>
+                        <a href="#bestSellers">Mais Vendidos</a>
                     </li>
-                    <li>
-                        <a href="#downloadApp" onClick={(event) => handleNavigationClick(event, 'downloadApp')}>Download App</a>
+                    <li onClick={(event) => handleNavigationClick(event, 'downloadApp')}>
+                        <a href="#downloadApp">Download App</a>
                     </li>
                 </ul>
             </nav>

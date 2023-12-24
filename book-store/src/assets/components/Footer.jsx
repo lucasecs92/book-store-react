@@ -1,6 +1,6 @@
 import styles from '../css/Footer.module.css';
 
-import { FacebookLogo, InstagramLogo, PinterestLogo, YoutubeLogo }from '@phosphor-icons/react';
+import { FacebookLogo, InstagramLogo, PinterestLogo, YoutubeLogo } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
 
 const Footer = () => {
