@@ -35,8 +35,7 @@
     cursor: pointer;
     background-color: transparent;
 }
-
-.bannerInfo 
+ 
 .billboardBtn {
     color: var(--nude);
     padding: 12px;
@@ -49,10 +48,9 @@
     width: 150px;
 }
 
-.bannerInfo 
 .billboardBtn:hover {
-    color: var(--navy);
-    border-color: var(--navy);
+    color: var(--preto);
+    border-color: var(--preto);
     transition: opacity 0.4s ease-in-out;
 }
 
