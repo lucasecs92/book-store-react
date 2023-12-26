@@ -57,7 +57,6 @@ const BestSellers = (props) => {
             if(window.innerWidth < 803) {
                 setSlidePerView(1); 
             }
-
         }
 
         handleResize();
@@ -82,7 +81,7 @@ const BestSellers = (props) => {
                     navigation={isNavigationEnabled}
                     loop={true}
                     autoplay={{
-                        delay: 5000,
+                        delay: 2000,
                         disableOnInteraction: false,
                     }}
                     >
