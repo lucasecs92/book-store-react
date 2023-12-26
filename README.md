@@ -1,2 +1,2 @@
 # book-store-react
- Projeto de livraria online desenvolvido com React e JavaScript.
+ Projeto Front-end de uma livraria online desenvolvido com React e JavaScript.
