@@ -3,19 +3,19 @@
     height: 0px;
 } */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
  
 ::-webkit-scrollbar-track {
-    background: var(--lightpink);
+    background: var(--beige);
 }
  
 ::-webkit-scrollbar-thumb {
-    background: var(--yellow);
+    background: var(--nude);
 }
  
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--nude);
+    background: var(--gray);
 }
 
 * {
