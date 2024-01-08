@@ -2,6 +2,21 @@
     width: 0px;
     height: 0px;
 } */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: var(--lightpink);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--nude);
+}
 
 * {
     margin: 0;
