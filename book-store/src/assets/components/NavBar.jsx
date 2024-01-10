@@ -89,7 +89,7 @@ const NavBar = (props) => {
                     </a>
                 </section>
 
-                <form className={styles.navSearchForm}>
+                <search className={styles.navSearchForm}>
                     <section className={styles.dropdown} ref={dropdownRef}>
                         <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
                             <span className={styles.select}>Todos</span>
@@ -109,14 +109,14 @@ const NavBar = (props) => {
                         
                     <input
                         className={styles.searchField}
-                        type="text"
+                        type="search"
                         placeholder="O que você está buscando?"
                     />
 
                     <button className={styles.searchBtn} type="submit">
                         <MagnifyingGlass/>
                     </button>
-                </form>
+                </search>
 
                 <nav className={styles.navRight}>
                     <ul className={styles.navRightUl}>

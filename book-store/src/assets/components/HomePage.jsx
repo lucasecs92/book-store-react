@@ -21,7 +21,7 @@ const HomePage = (props) => {
                 
                 <BestSellers addToCart={props.addToCart}/>
 
-                <DownloadApp/>OLÁ
+                <DownloadApp/>
 
             </section>
         </>

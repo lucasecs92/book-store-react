@@ -1,7 +1,10 @@
 import styles from '../css/Footer.module.css';
 
-import { FacebookLogo, InstagramLogo, PinterestLogo, YoutubeLogo } from '@phosphor-icons/react';
 import { PiBooksDuotone } from "react-icons/pi";
+import { FiYoutube } from "react-icons/fi";
+import { AiOutlineFacebook } from "react-icons/ai";
+import { FaInstagram, FaPinterestP } from "react-icons/fa";
+
 
 const Footer = () => {
 
@@ -65,10 +68,10 @@ const Footer = () => {
                 <section className={styles.secondaryFooter}>
                     <p>Copyright (c) 2023 Book Store.</p>
                     <section className={styles.socialLogos}>
-                        <a className={styles.socialItem} href="#"><FacebookLogo/></a>
-                        <a className={styles.socialItem} href="#"><YoutubeLogo /></a>
-                        <a className={styles.socialItem} href="#"><InstagramLogo/></a>
-                        <a className={styles.socialItem} href="#"><PinterestLogo/></a>
+                        <a className={styles.socialItem} href="#"><AiOutlineFacebook/></a>
+                        <a className={styles.socialItem} href="#"><FiYoutube/></a>
+                        <a className={styles.socialItem} href="#"><FaInstagram /></a>
+                        <a className={styles.socialItem} href="#"><FaPinterestP/></a>
                     </section>
                 </section>
 
