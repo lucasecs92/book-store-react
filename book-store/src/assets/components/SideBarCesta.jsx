@@ -76,7 +76,7 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                                                 <a href="#" className={styles.quantidadePlus} onClick={() => handleIncreaseQuantity(item)}>+</a>
                                             </span>
                                             <span className={styles.valor}>
-                                            <p>{`R$ ${(Number(item.price.replace('R$', '')) * item.quantity).toFixed(2)}`}</p>
+                                                <p>{`R$ ${(Number(item.price.replace('R$', '')) * item.quantity).toFixed(2)}`}</p>
                                             </span>
                                         </div>
                                     </div>
