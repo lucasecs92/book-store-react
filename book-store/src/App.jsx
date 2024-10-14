@@ -1,4 +1,4 @@
-import './assets/css/global.module.css';
+import './assets/css/global.css';
 import styles from './assets/css/App.module.css';
     
 import NavBar from './assets/components/NavBar.jsx';
