@@ -1,0 +1,26 @@
+@import '../styles/variables';
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: $beige;
+}
+::-webkit-scrollbar-thumb {
+    background: $gray;
+    // border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #61677ae7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 242, 237);
+    overflow-x: hidden;
+}

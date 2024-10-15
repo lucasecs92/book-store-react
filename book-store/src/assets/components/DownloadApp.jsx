@@ -1,26 +1,26 @@
-import styles from '../css/DownloadApp.module.css';
+import '../styles/DownloadApp.css';
 
-import telefone from '../images/mobile-bookstore.png';
-import googlePlayImg from '../images/google-play.svg';
-import appStoreImg from '../images/app-store.svg';
+import telefone from '../img/mobile-bookstore.png';
+import googlePlayImg from '../img/google-play.svg';
+import appStoreImg from '../img/app-store.svg';
 
 const DownloadApp = () => {
 
     return (
         <>   
-            <section className={styles.downloadApp} id='downloadApp'>
-                <section className={styles.downloadAppWrap}>
+            <section className="download-app" id='downloadApp'>
+                <section className="download-app-wrap">
 
-                    <div className={styles.downloadAppTelefone}>
+                    <div className="download-app-telefone">
                         <img src={telefone} alt="Telefone" />
                     </div>
 
-                    <div className={styles.downloadAppInfo}>
+                    <div className="download-app-info">
                         <h2>Download Our App Now!</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolore explicabo, architecto eveniet hic ipsum, ex provident omnis iste exercitationem repudiandae. At consequuntur reiciendis illo exercitationem cupiditate culpa et blanditiis.</p>
-                        <div className={styles.apps}> 
-                            <img src={googlePlayImg} alt="Google Play" className={styles.googlePlay}/>
-                            <img src={appStoreImg} alt="App Store" className={styles.appStore}/>
+                        <div className="apps"> 
+                            <img src={googlePlayImg} alt="Google Play" className="google-play"/>
+                            <img src={appStoreImg} alt="App Store" className="app-store"/>
                         </div>
                     </div>
 

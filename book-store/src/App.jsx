@@ -1,5 +1,5 @@
-import './assets/css/global.css';
-import styles from './assets/css/App.module.css';
+import './assets/styles/global.css';
+import './assets/styles/App.css';
     
 import NavBar from './assets/components/NavBar.jsx';
 import HomePage from './assets/components/HomePage.jsx';
@@ -33,7 +33,7 @@ function App() {
   
   return (
     <>
-      <section className={styles.containerApp}>
+      <section className="container-app">
           <header>
             <NavBar cartItems={cartItems} setCartItems={setCartItems}/>
           </header>

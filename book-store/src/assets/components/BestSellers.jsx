@@ -1,21 +1,19 @@
-import styles from '../css/BestSellers.module.css';
+import '../styles/BestSellers.css';
 import { useState, useEffect } from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import image1 from '../images/book1.jpg';
-import image2 from '../images/book2.jpg';
-import image3 from '../images/book3.jpg';
-import image4 from '../images/book4.jpg';
-import image5 from '../images/book5.jpg';
-import image6 from '../images/book6.jpg';
-import image7 from '../images/book7.jpg';
-import image8 from '../images/book8.jpg';
-import image9 from '../images/book9.jpg';
-import image10 from '../images/book10.jpg';
-
-import PropTypes from 'prop-types';
 import { LuPlusCircle } from "react-icons/lu";
+import PropTypes from 'prop-types';
+
+import image1 from '../img/book1.jpg';
+import image2 from '../img/book2.jpg';
+import image3 from '../img/book3.jpg';
+import image4 from '../img/book4.jpg';
+import image5 from '../img/book5.jpg';
+import image6 from '../img/book6.jpg';
+import image7 from '../img/book7.jpg';
+import image8 from '../img/book8.jpg';
+import image9 from '../img/book9.jpg';
+import image10 from '../img/book10.jpg';
 
 const BestSellers = (props) => {
 
@@ -52,7 +50,7 @@ const BestSellers = (props) => {
                 setSlidePerView(2);
             }
 
-            setIsNavigationEnabled(window.innerWidth < 1040);
+            setIsNavigationEnabled(window.innerWidth < 802);
             
             if(window.innerWidth < 803) {
                 setSlidePerView(1); 
@@ -71,10 +69,10 @@ const BestSellers = (props) => {
 
     return (
         <>
-            <section className={styles.bestSellers} id='bestSellers'>
-                <h3 className={styles.title}>Mais Vendidos</h3>
+            <section className="best-sellers" id='bestSellers'>
+                <h3 className="best-sellers-title">Mais Vendidos</h3>
 
-                <section className={styles.slideBook}>
+                <section className="slide-book">
                     <Swiper
                     slidesPerView={slidesPerView}
                     // pagination={{ clickable: true }}
@@ -85,28 +83,27 @@ const BestSellers = (props) => {
                         disableOnInteraction: false,
                     }}
                     >
-                        
                         {books.map((book) => {
                             return (    
                                 <SwiperSlide key={book.id}>
-                                    <section className={styles.inner}>
+                                    <section className="slide-book-inner">
                                         <img
                                         src={book.image}
                                         alt={book.title}
-                                        className={styles.slideImg}
+                                        className="slide-img"
                                         />
-                                        <aside className={styles.slideBookInfo}>
-                                            <h2 className={styles.slideBookTitle}>
+                                        <aside className="slide-book-info">
+                                            <h2 className="slide-book-title">
                                                {book.title}
                                             </h2>
-                                            <p className={styles.slideBookAutor}>
+                                            <p className="slide-book-autor">
                                                {book.author}
                                             </p>
-                                            <p className={styles.slideBookPrice}>
+                                            <p className="slide-book-price">
                                                {book.price}
                                             </p>
                                         </aside>
-                                        <a href="#" className={styles.slideBookBtn} aria-label={`Comprar ${book.title}`} 
+                                        <a href="#" className="slide-book-btn" aria-label={`Comprar ${book.title}`} 
                                         onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
                                         onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
                                         onClick={(event) => {event.preventDefault(); props.addToCart(book);}}>

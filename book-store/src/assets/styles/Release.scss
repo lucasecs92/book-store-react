@@ -1,0 +1,226 @@
+@import '../styles/variables';
+
+.release-container {
+    width: 100%;
+    /* height: 175vh; */
+    background-color: $lightpink;
+    margin: 0 auto;
+    padding: 0 6.25rem;
+    padding-top: 30px;
+    padding-bottom: 2rem;
+}
+
+.release-title {
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: $preto;
+}
+
+.release-books {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+    text-align: center;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .2s all ease-in-out;
+    margin: 0.6rem;
+    padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+    cursor: pointer;
+    width: 20vw;
+}
+
+.inner:hover {
+    box-shadow: 0 0 10px #4d364b8f;
+} 
+
+.inner:hover .release-book-btn {
+    background: $blue;
+    color: $branco;
+}
+
+.release-book-img {
+    padding: 0 14px;
+    display: block;
+    width: 17vw;
+}
+
+.release-book-info {
+    min-height: 7rem;
+    padding-top: 1rem;
+}
+
+.release-book-title {
+    font-size: 0.9rem;
+    padding-bottom: 0.3rem;
+    color: $preto;
+}
+
+.release-book-autor {
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.release-book-price {
+    padding: 1rem 0rem;
+    color: $gray;
+}
+
+.release-book-btn {
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    font-weight: 500;
+    color: $blue;
+
+    width: 85%; 
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.release-book-btn svg {
+    font-size: 1.5rem;
+}
+
+.view-more-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem 3rem 4rem 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    color: $gray;
+}
+
+.view-more-wrap-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.view-more-wrap-wrap:hover{
+    cursor: pointer;
+    color: $preto;
+}
+
+.view-more-wrap p {
+    padding-right: 0.5rem;
+}
+
+.view-more-wrap p,
+.view-more-wrap svg {
+    cursor: pointer;
+}
+
+.arrowIcon {
+    transition: transform 0.8s ease;
+}
+
+.view-more-wrap-wrap:hover .arrow-icon {
+    transform: translateX(10px);
+}
+
+@media (max-width: 1130px) {
+
+    .release-container {
+        height: 100%;
+        padding: 0 3rem;
+    }
+
+}
+
+@media (max-width: 993px) {
+
+    .release-container {
+        padding: 0 3.5rem;
+    }
+
+    .inner {
+        margin: 2.6rem;
+    } 
+
+    .release-title {
+        padding-bottom: 25px;
+    }
+
+    .release-book-img {
+        width: 20vw;
+    }
+
+    .release-book-btn {
+        font-size: 0.9rem;
+    }
+
+    .view-more-wrap {
+        justify-content: center;
+    }
+}
+
+/* @media screen and (min-width: 790px) and (max-width: 993px) {
+    .inner:hover {
+        box-shadow: none;
+    } 
+} */
+@media (max-width: 790px) {
+
+    .release-container {
+        padding: 0px 4.5rem;
+    }
+
+    .inner:hover {
+        box-shadow: none;
+    } 
+
+    .inner {
+        margin: 5rem;
+    } 
+
+    .view-more-wrap {
+        border-top: 1px solid $lightgray;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .release-container {
+        padding: 0px 3.5rem;
+    }
+
+    .inner {
+        margin: 3rem 4rem;
+    } 
+}
+
+@media (max-width: 506px) {
+    
+    .release-container {
+        padding: 0px 40px;
+    }
+
+    .release-books {
+        width: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .inner {
+        width: 33vw;
+    }
+
+    .release-book-img {
+        width: 35vw;
+    }
+
+
+}

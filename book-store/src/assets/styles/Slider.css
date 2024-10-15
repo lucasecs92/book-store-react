@@ -1,0 +1,138 @@
+.slider {
+  width: 100vw;
+  background-color: #F5EEC8;
+  color: #272829;
+  padding: 80px;
+}
+
+.billboard {
+  padding: 150px 120px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-info {
+  margin-right: 12.813rem;
+}
+
+.banner-info h2 {
+  font-size: 4.5em;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 25px 0;
+}
+
+.banner-info p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: lighter;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.banner-info .btn-wrap {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.billboard-btn {
+  color: #C5A992;
+  padding: 12px;
+  border: 1px solid #C5A992;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.billboard-btn:hover {
+  color: #272829;
+  border-color: #272829;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.billboard-btn svg {
+  margin-left: 8px;
+}
+
+.carousel-img {
+  display: block;
+  background-attachment: fixed;
+}
+
+@media (max-width: 1330px) {
+  .slider {
+    padding: 80px 20px;
+  }
+  .billboard {
+    padding: 100px 80px;
+  }
+  .banner-info {
+    margin-right: 1rem;
+  }
+  .carousel-img {
+    width: 22rem;
+  }
+}
+@media (max-width: 980px) {
+  .billboard {
+    padding: 150px 80px 60px 80px;
+  }
+  .banner-info {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 0.8rem;
+  }
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .slide-img {
+    padding-left: 0;
+  }
+  .carousel-img {
+    width: 20rem;
+  }
+}
+@media (max-width: 860px) {
+  .banner-info h2 {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 788px) {
+  .billboard {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .banner-info {
+    margin: 0rem;
+  }
+}
+@media (max-width: 718px) {
+  .billboard {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .banner-info h2 {
+    font-size: 3.5em;
+  }
+  .slide-img {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .carousel-img {
+    width: 15rem;
+  }
+}
+@media (max-width: 506px) {
+  /* .slider {
+      padding-top: 190px;
+  } */
+  .banner-info h2 {
+    font-size: 2.5em;
+  }
+}/*# sourceMappingURL=Slider.css.map */

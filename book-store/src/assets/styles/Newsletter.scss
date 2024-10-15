@@ -1,0 +1,125 @@
+@import '../styles/variables';
+
+.newsletter {
+    background-color: $beige;
+    height: 50vh;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+} 
+
+.newsletter h3 {
+    font-size: 2rem;
+    font-family: 'Young Serif', serif;
+    font-weight: 100;
+    width: 50vw;
+    color: $preto;
+}
+
+.newsletter 
+.newsletter-form {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.newsletter 
+.newsletter-form p {
+    margin-bottom: 25px;
+    line-height: 2rem;
+    color: $gray;
+}
+
+.container-input {
+    display: flex;
+}
+
+.newsletter-form 
+.email-field {
+    font-size: 0.9rem;
+    background-color: $beige;
+    padding: 0.438rem 0.438rem 0.438rem 0;
+    width: 60%;
+    border: 1px solid $navy;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.newsletter-form 
+.newsletter-btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    background-color: $beige;
+    font-weight: 500;
+    border: 1px solid $navy;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    padding: 0.438rem;
+}
+
+.newsletter-form 
+.newsletter-btn span {
+    padding-right: 5px;
+}
+
+.newsletter-btn span:hover {
+    color: $gray;
+}
+
+.newsletter-icon {
+    transition: transform 0.8s ease;
+}
+
+.newsletter-btn:hover .newsletter-icon {
+    transform: translateX(10px);
+}
+
+@media (max-width: 1055px) {
+    .newsletter-form 
+    .email-field {
+        width: 100%;
+    }    
+
+    .newsletter h3 {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .newsletter {
+        height: 80vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .newsletter h3 {
+        text-align: center;
+        padding-bottom: 35px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 500px) {   
+    .newsletter 
+    .newsletter-form {
+        width: 90vw;
+    }
+
+    .newsletter {
+        height: 70vh;
+        padding: 20px 0px;
+    }
+    .newsletter h3 {
+        text-align: start;
+        width: 90vw;
+    }
+}

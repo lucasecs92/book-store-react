@@ -1,0 +1,123 @@
+.best-sellers {
+  width: 100%;
+  height: 95vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.best-sellers-title {
+  text-align: center;
+  margin: 30px 0;
+  padding-top: 20px;
+  font-family: "Young Serif", serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #272829;
+}
+
+.slide-book {
+  cursor: grab;
+  overflow: hidden;
+  text-align: center;
+  margin: 0.6rem;
+  padding: 0.6rem;
+}
+
+.slide-book-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.2s all ease-in-out;
+  margin: 0.6rem;
+  padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+  cursor: pointer;
+}
+
+.slide-book-inner:hover {
+  box-shadow: 0 0 10px rgba(77, 54, 75, 0.5607843137);
+}
+
+.slide-book-inner:hover .slide-book-btn {
+  background: #3085C3;
+  color: #F5F5F5;
+}
+
+.slide-img {
+  height: 350px;
+  padding: 0 14px;
+  display: block;
+}
+
+.slide-book-info {
+  min-height: 7rem;
+  padding-top: 1rem;
+}
+
+.slide-book-title {
+  font-size: 0.8rem;
+  padding-bottom: 0.3rem;
+  color: #272829;
+}
+
+.slide-book-autor {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+.slide-book-price {
+  padding: 1rem 0rem;
+  color: #61677A;
+}
+
+.slide-book-btn {
+  box-sizing: border-box;
+  text-decoration: none;
+  /* padding: 10px 4.4rem; */
+  border: 1px solid #3085C3;
+  border-radius: 5px;
+  color: #3085C3;
+  transition: 0.2s all ease-in-out;
+  font-weight: 500;
+  width: 85%; /* Ajuste para o tamanho desejado */
+  height: 40px; /* Ajuste para o tamanho desejado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-book-btn svg {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1330px) {
+  .best-sellers {
+    height: 95vh;
+  }
+  .slide-book-btn {
+    width: 80%;
+  }
+}
+@media (max-width: 903px) {
+  .slide-book-btn {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 803px) {
+  .slide-book-inner:hover {
+    box-shadow: none;
+  }
+  .slide-book-btn {
+    width: 45%;
+  }
+}
+@media (max-width: 506px) {
+  .best-sellers {
+    padding: 0;
+    height: auto;
+  }
+  .slide-book-btn {
+    width: 65%;
+  }
+}/*# sourceMappingURL=BestSellers.css.map */

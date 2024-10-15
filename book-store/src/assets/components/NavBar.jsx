@@ -1,14 +1,10 @@
-import styles from '../css/NavBar.module.css';
+import '../styles/NavBar.css';
 import { useEffect, useRef, useState } from 'react';
-
-import { Basket, MagnifyingGlass, User } from '@phosphor-icons/react';
-import { PiBooksDuotone } from "react-icons/pi";
+import { PiBasket, PiBooksDuotone, PiMagnifyingGlass, PiUser } from "react-icons/pi";
 import { FaBars, FaCaretDown, FaTimes } from 'react-icons/fa';
-
+import PropTypes from 'prop-types';
 import FormLogin from './FormLogin.jsx';
 import SideBarCesta from './SideBarCesta.jsx';
-
-import PropTypes from 'prop-types';
 
 const NavBar = (props) => {
 
@@ -81,55 +77,55 @@ const NavBar = (props) => {
 
     return (
       <>
-        <section className={styles.wrapNav}>
-            <nav className={styles.navBarMain}>
-                <section className={styles.navLeft}>
-                    <a className={styles.navLogo} href="#">
+        <section className="wrap-nav">
+            <nav className="nav-bar-main">
+                <section className="nav-left">
+                    <a className="nav-logo" href="#">
                         <PiBooksDuotone/>Book store
                     </a>
                 </section>
 
-                <search className={styles.navSearchForm}>
-                    <section className={styles.dropdown} ref={dropdownRef}>
-                        <section className={styles.dropdownSelect} onClick={() => setIsOpen(!isOpen)}>
-                            <span className={styles.select}>Todos</span>
+                <search className="nav-search-form">
+                    <section className="dropdown" ref={dropdownRef}>
+                        <section className="dropdown-select" onClick={() => setIsOpen(!isOpen)}>
+                            <span className="select">Todos</span>
                             <FaCaretDown/>
                         </section>
 
                         {isOpen && (
-                        <section className={styles.dropdownList}>
-                            <div className={styles.dropdownListItem}>Nome do livro</div>
-                            <div className={styles.dropdownListItem}>Autor</div>
-                            <div className={styles.dropdownListItem}>Título</div>
-                            <div className={styles.dropdownListItem}>Editora</div>
-                            <div className={styles.dropdownListItem}>Descrição</div>
+                        <section className="dropdown-list">
+                            <div className="dropdown-list-item">Nome do livro</div>
+                            <div className="dropdown-list-item">Autor</div>
+                            <div className="dropdown-list-item">Título</div>
+                            <div className="dropdown-list-item">Editora</div>
+                            <div className="dropdown-list-item">Descrição</div>
                         </section>
                         )}
                     </section>
                         
                     <input
-                        className={styles.searchField}
+                        className="search-field"
                         type="search"
                         placeholder="O que você está buscando?"
                     />
 
-                    <button className={styles.searchBtn} type="submit">
-                        <MagnifyingGlass/>
+                    <button className="search-btn" type="submit">
+                        <PiMagnifyingGlass/>
                     </button>
                 </search>
 
-                <nav className={styles.navRight}>
-                    <ul className={styles.navRightUl}>
+                <nav className="nav-right">
+                    <ul className="nav-right-ul">
 
-                        <li className={styles.navLogin} onClick={handleLoginClick}>
-                            <aside><User/></aside>
+                        <li className="nav-login" onClick={handleLoginClick}>
+                            <aside><PiUser/></aside>
                             <a href="#">Entrar</a>
                         </li>
 
-                        <li className={styles.navCart} onClick={(event) => {event.preventDefault(); handleCartClick();}}>
-                            <aside><Basket /></aside>
+                        <li className="nav-cart" onClick={(event) => {event.preventDefault(); handleCartClick();}}>
+                            <aside><PiBasket /></aside>
                             {props.cartItems.reduce((total, item) => total + item.quantity, 0) > 0 && 
-                                <span className={styles.notification}>{props.cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
+                                <span className="notification">{props.cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
                             }
                             <a href="#">Cesta</a>
                         </li>
@@ -138,15 +134,15 @@ const NavBar = (props) => {
                 </nav>
             </nav>        
 
-            <menu className={styles.hamburguerMenu} onClick={() => {
+            <menu className="hamburguer-menu" onClick={() => {
                 setIsMenuOpen(prevState => !prevState);
                 setShowDividingLineNav(prevState => !prevState);
             }}>
                 {isMenuOpen ? <FaTimes /> : <FaBars />}
             </menu> 
 
-            <nav className={`${styles.dividingLineNav} ${showDividingLineNav ? styles.show : ''}`}>
-                <ul className={styles.dividingLineNavUl}>
+            <nav className={`dividing-line-nav ${showDividingLineNav ? "show" : ''}`}>
+                <ul className="dividing-line-nav-ul">
                     <li onClick={(event) => handleNavigationClick(event, 'sliderHome')}>
                         <a href="#sliderHome">Home</a>
                     </li>
@@ -180,7 +176,7 @@ const NavBar = (props) => {
                 zIndex: 9999, // para garantir que o FormLogin apareça por cima de todos os outros componentes
             }}>
                 <FormLogin />
-                <section className={styles.closeLoginBtn} onClick={handleLoginClick}>
+                <section className="close-login-btn" onClick={handleLoginClick}>
                     <FaTimes/>
                 </section>
             </div>
@@ -205,7 +201,7 @@ const NavBar = (props) => {
                     cartItems={props.cartItems} 
                     onRemoveItem={handleRemoveItem}
                 />
-                <section className={styles.closeLoginBtn} onClick={handleCartClick}>
+                <section className="close-login-btn" onClick={handleCartClick}>
                     <FaTimes/>
                 </section>
             </div>

@@ -1,9 +1,7 @@
+import '../styles/SideBarCesta.css'
 import { useState } from 'react';
-import styles from '../css/SideBarCesta.module.css'
-
 import { LuShoppingBasket, LuX } from "react-icons/lu";
 import { FaTimesCircle } from "react-icons/fa";
-
 import PropTypes from 'prop-types';
 
 const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
@@ -39,43 +37,43 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
     
     return isOpen ? (
         <>
-            <section className={styles.basketContainer}>
-                <section className={styles.basketContainerSecond}>
-                        <header className={styles.basketHeader}>
-                            <div className={styles.titleHeader}>
+            <section className="basket-container">
+                <section className="basket-container-second">
+                        <header className="basket-header">
+                            <div className="title-header">
                                 <h3>Minha Cesta</h3>
                             </div>
-                            <div className={styles.closeHeaderBtn} onClick={handleCloseClick}>
+                            <div className="close-header-btn" onClick={handleCloseClick}>
                                 <LuX />
                             </div>
                         </header>
 
-                        <main className={styles.basketItems}>
+                        <main className="basket-items">
                             {cartItems.map((item, index) => (
-                                <section className={styles.basketItemBook} key={index}>
+                                <section className="basket-item-book" key={index}>
                                     <img 
                                         src={item.image} 
                                         alt={item.title}
-                                        className={styles.basketItemImg} 
+                                        className="basket-item-img" 
                                     />
-                                    <div className={styles.basketInfoProduto}>
-                                        <div className={styles.basketInfoWrap}>
-                                            <p className={styles.produtoTitle}>{item.title}</p>
+                                    <div className="basket-info-produto">
+                                        <div className="basket-info-wrap">
+                                            <p className="produto-title">{item.title}</p>
                                             <a 
-                                            className={styles.deleteItem} 
+                                            className="delete-item" 
                                             href="#"
                                             onClick={(event) => handleRemoveClick(event, item)}
                                             >
                                                <FaTimesCircle />
                                             </a>
                                         </div>
-                                        <div className={styles.quantidadeProduto}>
-                                            <span className={styles.basketAddRemove}>
-                                                <a href="#" className={styles.quantidadeMinus} onClick={() => handleDecreaseQuantity(item)}>-</a>
-                                                <input className={styles.quantidadeNumber} value={item.quantity}/>
-                                                <a href="#" className={styles.quantidadePlus} onClick={() => handleIncreaseQuantity(item)}>+</a>
+                                        <div className="quantidade-produto">
+                                            <span className="basket-add-remove">
+                                                <a href="#" className="quantidade-minus" onClick={() => handleDecreaseQuantity(item)}>-</a>
+                                                <input className="quantidade-number" value={item.quantity}/>
+                                                <a href="#" className="quantidade-plus" onClick={() => handleIncreaseQuantity(item)}>+</a>
                                             </span>
-                                            <span className={styles.valor}>
+                                            <span className="valor">
                                                 <p>{`R$ ${(Number(item.price.replace('R$', '')) * item.quantity).toFixed(2)}`}</p>
                                             </span>
                                         </div>
@@ -85,25 +83,25 @@ const SideBarCesta = ({ onClose, cartItems, onRemoveItem, setCartItems }) => {
                             ))}
 
                             {cartItems.length === 0 && (
-                                <section className={styles.emptyBasket}>
-                                    <div className={styles.emptyBasketIcon}>
+                                <section className="empty-basket">
+                                    <div className="empty-basket-icon">
                                         <LuShoppingBasket/>
                                     </div>
-                                    <div className={styles.emptyBasketText}>
+                                    <div className="empty-basket-text">
                                         <p>Sua cesta está vazia</p>
                                     </div>
                                 </section>
                             )}
                         </main>
 
-                        <footer className={styles.basketFooter}>
+                        <footer className="basket-footer">
                             {cartItems.length > 0 && (
-                                <section className={styles.basketFooterInner}>
-                                    <div className={styles.total}>
+                                <section className="basket-footer-inner">
+                                    <div className="total">
                                         <h3>Subtotal:</h3>
                                         <p>R$ {subtotal.toFixed(2)}</p>
                                     </div>
-                                    <div className={styles.purchaseBtn}>
+                                    <div className="purchase-btn">
                                         <a href="#">Finalizar Compra</a>
                                     </div>
                                 </section>

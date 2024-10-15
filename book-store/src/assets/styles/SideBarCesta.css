@@ -1,0 +1,161 @@
+.basket-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 350px;
+  z-index: 1;
+  background-color: #F5F5F5;
+  transition: 0.5s ease;
+  font-family: "Ubuntu", sans-serif;
+  color: #61677A;
+}
+
+.basket-header {
+  background-color: #F4E869;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: fixed;
+  width: 350px;
+}
+
+.close-header-btn {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.basket-items {
+  height: 100%;
+  padding: 0 15px;
+  padding-top: 56px;
+}
+
+.basket-item-book {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.basket-item-img {
+  display: inline-block;
+  width: 70px;
+}
+
+.basket-info-produto {
+  display: inline-block;
+  width: 80%;
+  padding-left: 15px;
+}
+
+.basket-info-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.produto-title {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.delete-item {
+  text-decoration: none;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  color: #D8D9DA;
+}
+
+.delete-item:hover {
+  color: rgba(255, 0, 0, 0.589);
+}
+
+.quantidade-produto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.basket-add-remove {
+  padding: 5px;
+  border: 1px solid #D8D9DA;
+}
+
+.quantidade-number {
+  width: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.quantidade-minus,
+.quantidade-plus {
+  text-decoration: none;
+  display: inline-block;
+  width: 23px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.basket-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #D8D9DA;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #F5EEC8;
+  width: 350px;
+}
+
+.purchase-btn {
+  text-transform: uppercase;
+  width: 350px;
+  background-color: #3085C3;
+  padding: 0.7rem;
+  font-size: 1rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.purchase-btn:hover {
+  background-color: #072541;
+}
+
+.purchase-btn a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.empty-basket {
+  color: #C5A992;
+  padding: 250px 0;
+}
+
+.empty-basket-icon {
+  font-size: 4.5rem;
+}
+
+.empty-basket-icon, .empty-basket-text {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .basket-container,
+  .basket-header,
+  .total,
+  .purchase-btn {
+    width: 100vw;
+  }
+}/*# sourceMappingURL=SideBarCesta.css.map */

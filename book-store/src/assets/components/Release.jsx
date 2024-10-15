@@ -1,18 +1,17 @@
-import styles from '../css/Release.module.css';
+import '../styles/Release.css';
 import { useState } from 'react';
-
 import { LuPlusCircle } from "react-icons/lu";
+import { FaArrowRightLong } from 'react-icons/fa6';
 import PropTypes from 'prop-types';
 
-import releaseBook1 from '../images/release-book1.jpg';
-import releaseBook2 from '../images/release-book2.jpg';
-import releaseBook3 from '../images/release-book3.jpg';
-import releaseBook4 from '../images/release-book4.jpg';
-import releaseBook5 from '../images/release-book5.jpg';
-import releaseBook6 from '../images/release-book6.jpg';
-import releaseBook7 from '../images/release-book7.jpg';
-import releaseBook8 from '../images/release-book8.jpg';
-import { FaArrowRightLong } from 'react-icons/fa6';
+import releaseBook1 from '../img/release-book1.jpg';
+import releaseBook2 from '../img/release-book2.jpg';
+import releaseBook3 from '../img/release-book3.jpg';
+import releaseBook4 from '../img/release-book4.jpg';
+import releaseBook5 from '../img/release-book5.jpg';
+import releaseBook6 from '../img/release-book6.jpg';
+import releaseBook7 from '../img/release-book7.jpg';
+import releaseBook8 from '../img/release-book8.jpg';
 
 const Release = (props) => {
 
@@ -33,23 +32,23 @@ const Release = (props) => {
 
     return (
         <>
-            <section className={styles.releaseContainer} id='release'>
-                <h3 className={styles.title}>Lançamentos</h3>
-                <section className={styles.releaseBooks}>
+            <section className="release-container" id='release'>
+                <h3 className="release-title">Lançamentos</h3>
+                <section className="release-books">
                     {books.slice(0, displayCount).map((book) => (
-                            <section key={book.id} className={styles.inner}>
+                            <section key={book.id} className="inner">
                                 <img
                                 src={book.image}
                                 alt={book.title}
-                                className={styles.releaseBookImg}
+                                className="release-book-img"
                                 />
-                                <aside className={styles.releaseBookInfo}>
-                                    <h2 className={styles.releaseBookTitle}>{book.title}</h2>
-                                    <p className={styles.releaseBookAutor}>{book.author}</p>
-                                    <p className={styles.releaseBookPrice}>{book.price}</p>
+                                <aside className="release-book-info">
+                                    <h2 className="release-book-title">{book.title}</h2>
+                                    <p className="release-book-autor">{book.author}</p>
+                                    <p className="release-book-price">{book.price}</p>
                                 </aside>
             
-                                <a href="#" className={styles.releaseBookBtn} 
+                                <a href="#" className="release-book-btn" 
                                 onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
                                 onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
                                 onClick={(event) => {
@@ -63,10 +62,10 @@ const Release = (props) => {
                 </section>
 
                 {displayCount < books.length && (
-                    <span className={styles.viewMoreWrap} onClick={() => setDisplayCount(books.length)}>
-                        <div className={styles.viewMoreWrapWrap}>
+                    <span className="view-more-wrap" onClick={() => setDisplayCount(books.length)}>
+                        <div className="view-more-wrap-wrap">
                             <p>View More</p>
-                            <FaArrowRightLong className={styles.arrowIcon}/>
+                            <FaArrowRightLong className="arrow-icon"/>
                         </div>
                     </span>
                 )}

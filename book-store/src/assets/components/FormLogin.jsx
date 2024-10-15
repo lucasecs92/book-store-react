@@ -1,6 +1,5 @@
+import '../styles/FormLogin.css';
 import { useEffect, useRef, useState} from 'react';
-import styles from '../css/FormLogin.module.css';
-
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const FormLogin = () => {
@@ -44,50 +43,50 @@ const FormLogin = () => {
  
     return (
         <>
-            <section className={styles.container}>
+            <section className="container">
                 
-                <div className={styles.buttonsForm}>
-                    <div className={styles.btnColor} ref={btnColorRef}></div>
+                <div className="buttons-form">
+                    <div className="btn-color" ref={btnColorRef}></div>
                     <button id="btnSignin" type="button" className={selectedButton === 'signin' ? 'selected' : ''} style={{color: signinColor}}>Sign In</button>
                     <button id="btnSignup" type="button" className={selectedButton === 'signup' ? 'selected' : ''} style={{color: signupColor}}>Sign Up</button>
                 </div>
 
-                <form className={styles.signIn} ref={formSigninRef}>
+                <form className="sign-in" ref={formSigninRef}>
 
-                    <input className={styles.inputText} id='input-text' type="text" placeholder="Email" required />
+                    <input className="input-text" id='input-text' type="text" placeholder="Email" required />
 
-                    <div className={styles.divInputPsw}>
-                        <input className={styles.inputPassword} type={showPassword ? "text" : "password"} placeholder="Password" required />
+                    <div className="div-input-psw">
+                        <input className="input-password" type={showPassword ? "text" : "password"} placeholder="Password" required />
                         {showPassword ? <FaRegEyeSlash onClick={handleShowPassword}/> : <FaRegEye onClick={handleShowPassword}/>}    
                     </div>
                     
-                    <div className={styles.divCheck}>
+                    <div className="div-check">
                         <input type="checkbox" id='remember-me'/>
                         <label htmlFor="remember-me">remember me</label>
                     </div>
 
-                    <button className={styles.btnSubmit} type="submit">sign in</button>
+                    <button className="btn-submit" type="submit">sign in</button>
 
                     <a href="#">forget password ?</a>
                 </form> 
 
-                <form className={styles.signUp} ref={formSignupRef}>
+                <form className="sign-up" ref={formSignupRef}>
 
-                    <input className={styles.inputText} type="text" placeholder='Nome completo' required />
+                    <input className="input-text" type="text" placeholder='Nome completo' required />
 
-                    <input className={styles.inputText} type="text" placeholder="Email" required />
+                    <input className="input-text" type="text" placeholder="Email" required />
 
-                    <div className={styles.divInputPsw}>
-                        <input className={styles.inputPassword} type={showPassword ? "text" : "password"} placeholder="Create Password" required />
+                    <div className="div-input-psw">
+                        <input className="input-password" type={showPassword ? "text" : "password"} placeholder="Create Password" required />
                         {showPassword ? <FaRegEyeSlash onClick={handleShowPassword}/> : <FaRegEye onClick={handleShowPassword}/>}
                     </div>
 
-                    <div className={styles.divCheck}>
+                    <div className="div-check">
                         <input type="checkbox" required id='i-agree'/>
                         <label htmlFor="i-agree">I agree that the Book Store, including member, may send me content, offers and more.</label>
                     </div>
                     
-                    <button className={styles.btnSubmit} type="submit">register now</button>
+                    <button className="btn-submit" type="submit">register now</button>
                 </form>
             </section>
         </>

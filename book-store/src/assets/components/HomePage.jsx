@@ -1,4 +1,3 @@
-import styles from '../css/HomePage.module.css';
 import PropTypes from 'prop-types';
 
 import Slider from './Slider.jsx';
@@ -11,7 +10,7 @@ const HomePage = (props) => {
 
     return (
         <>
-            <section className={styles.containerHome}>
+            <section>
 
                 <Slider/>
                 

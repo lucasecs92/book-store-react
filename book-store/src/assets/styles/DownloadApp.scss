@@ -1,0 +1,128 @@
+@import '../styles/variables';
+
+.download-app {
+    background-color: $lightpink;
+}
+
+.download-app-wrap {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    padding: 2.5rem 0;
+}
+
+.download-app-telefone {
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+}
+
+.download-app-telefone img {
+    height: 65vh; 
+}
+
+.download-app-info {
+    width: 50vw;
+    margin: 10rem 0rem 10rem 0rem;
+    padding-right: 20rem;
+}
+
+.download-app-info h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $preto;
+}
+
+.download-app-info p {
+    padding-top: 2.8em;
+    line-height: 1.8;
+    font-family: 'Ubuntu', sans-serif;
+    color: $gray;
+    font-weight: 300;
+}
+
+.apps {
+    display: flex;
+}
+
+.apps img{
+    cursor: pointer;
+    width: 11vw;
+}
+
+.google-play {
+    margin-right: 7px;
+}
+
+@media (max-width: 1440px) {
+    .download-app-wrap {
+        padding: 0;
+    }
+    .download-app-telefone img {
+        height: 73vh; 
+    } 
+}
+
+@media (max-width: 1330px) {
+   
+    .download-app-info {
+        padding-right: 8rem;
+    }
+    .apps img {
+        width: 15vw;
+    }
+    
+}
+@media (max-width: 993px) {
+    
+    .download-app-info h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 773px) {
+
+    .download-app-wrap {
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    
+    .download-app-telefone {
+        margin: 0 0 7rem 0;
+        justify-content: center;
+    }
+
+    .download-app-telefone img {
+        height: 55vh; 
+    }
+
+    .download-app-info {
+        width: auto;
+        margin: 5rem 0rem 2rem 5rem;
+        padding-right: 5rem;
+        text-align: center;
+    }
+
+    .apps {
+        justify-content: space-evenly;
+        gap: 1rem;
+    } 
+    .apps img {
+        width: 20vw;
+    }
+    .google-play {
+        margin: 0px;
+    }    
+}
+
+@media (max-width: 500px) {
+
+    .download-app-info h2 {
+        font-size: 2rem;
+    }
+    
+    .apps img {
+        width: 30vw;
+    }
+}

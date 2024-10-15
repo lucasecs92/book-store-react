@@ -1,4 +1,4 @@
-import styles from '../css/Footer.module.css';
+import '../styles/Footer.css';
 
 import { PiBooksDuotone } from "react-icons/pi";
 import { FiYoutube } from "react-icons/fi";
@@ -10,11 +10,11 @@ const Footer = () => {
 
     return (
         <>
-            <section className={styles.footer}>
+            <section className="footer">
 
-                <section className={styles.mainFooter}>
-                    <aside className={styles.companyBrand}>
-                        <a className={styles.logo} href="#">
+                <section className="main-footer">
+                    <aside className="company-brand">
+                        <a className="logo" href="#">
                             <PiBooksDuotone/>Book store
                         </a>
                         <p>
@@ -23,8 +23,8 @@ const Footer = () => {
                             semper erat ac in suspendisse iaculis.
                         </p>
                     </aside>
-                    <aside className={styles.infoFooter}>
-                        <aside className={styles.footerWrapper}>
+                    <aside className="info-footer">
+                        <aside className="footer-wrapper">
                             <h2>About Us</h2>
                             <ul>
                                 <li><a href="#">ARTICLES</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
                                 <li><a href="#">DONATE</a></li>
                             </ul>
                         </aside>
-                        <aside className={styles.footerWrapper}>
+                        <aside className="footer-wrapper">
                             <h2>Discover</h2>
                             <ul>
                                 <li><a href="#">HOME</a></li>
@@ -44,7 +44,7 @@ const Footer = () => {
                                 <li><a href="#">ADVANCED SEARCH</a></li>
                             </ul>
                         </aside>
-                        <aside className={styles.footerWrapper}>
+                        <aside className="footer-wrapper">
                             <h2>My Account</h2>
                             <ul>
                                 <li><a href="#">SIGN</a></li>
@@ -53,7 +53,7 @@ const Footer = () => {
                                 <li><a href="#">TRACK MY ORDER</a></li>
                             </ul>
                         </aside>
-                        <aside className={styles.footerWrapper}>
+                        <aside className="footer-wrapper">
                             <h2>Help</h2>
                             <ul>
                                 <li><a href="#">HELP CENTER</a></li>
@@ -65,13 +65,13 @@ const Footer = () => {
                     </aside>
                 </section>
 
-                <section className={styles.secondaryFooter}>
+                <section className="secondary-footer">
                     <p>Copyright (c) 2023 Book Store.</p>
-                    <section className={styles.socialLogos}>
-                        <a className={styles.socialItem} href="#"><AiOutlineFacebook/></a>
-                        <a className={styles.socialItem} href="#"><FiYoutube/></a>
-                        <a className={styles.socialItem} href="#"><FaInstagram /></a>
-                        <a className={styles.socialItem} href="#"><FaPinterestP/></a>
+                    <section className="social-logos">
+                        <a className="social-item" href="#"><AiOutlineFacebook/></a>
+                        <a className="social-item" href="#"><FiYoutube/></a>
+                        <a className="social-item" href="#"><FaInstagram /></a>
+                        <a className="social-item" href="#"><FaPinterestP/></a>
                     </section>
                 </section>
 

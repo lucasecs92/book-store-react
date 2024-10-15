@@ -1,13 +1,11 @@
-import styles from '../css/Slider.module.css';
-
+import '../styles/Slider.css';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaArrowRightLong } from "react-icons/fa6";
 // import { EffectFade } from 'swiper/modules';
 
-import image1 from '../images/book8.jpg';
-import image2 from '../images/book9.jpg';
-
+import image1 from '../img/book8.jpg';
+import image2 from '../img/book9.jpg';
 
 const Slider = () => {
 
@@ -22,14 +20,14 @@ const Slider = () => {
 
     return (
         <>
-            <section className={styles.slider} id='sliderHome'>
+            <section className="slider" id='sliderHome'>
                 <Swiper
                     // modules={[EffectFade]}
                     // effect="fade"
                     spaceBetween={50}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
+                    navigation={false}
                     loop={true}
                     speed={800}
                     onSlideChange={(swiper) => {
@@ -44,12 +42,12 @@ const Slider = () => {
 
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <section className={styles.billboard}>
-                                <aside className={styles.bannerInfo}>
+                            <section className="billboard">
+                                <aside className="banner-info">
                                     <h2>{bookTitle}</h2>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas culpa alias quis fuga accusamus, autem, accusantium id ad quibusdam placeat, quidem nulla.</p>
-                                    <span className={styles.btnWrap}>
-                                        <a className={styles.billboardBtn} href="#">
+                                    <span className="btn-wrap">
+                                        <a className="billboard-btn" href="#">
                                             <span>READ MORE</span>
                                             <FaArrowRightLong />
                                         </a>
@@ -58,7 +56,7 @@ const Slider = () => {
                                 <img
                                     src={image}
                                     alt={`slide ${index}`}
-                                    className={styles.slideImg}
+                                    className="carousel-img"
                                 />
                             </section>
                         </SwiperSlide>
