@@ -3,10 +3,12 @@
 }
 
 .download-app-wrap {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 75px;
-  padding: 2.5rem 0;
+  padding: 6rem 0;
 }
 
 .download-app-telefone {
@@ -15,24 +17,19 @@
   width: 50vw;
 }
 
-.download-app-telefone img {
-  height: 65vh;
-}
-
 .download-app-info {
   width: 50vw;
-  margin: 10rem 0rem 10rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding-right: 20rem;
 }
-
 .download-app-info h2 {
   font-size: 3rem;
   font-weight: 500;
   color: #272829;
 }
-
 .download-app-info p {
-  padding-top: 2.8em;
   line-height: 1.8;
   font-family: "Ubuntu", sans-serif;
   color: #61677A;
@@ -42,7 +39,6 @@
 .apps {
   display: flex;
 }
-
 .apps img {
   cursor: pointer;
   width: 11vw;
@@ -54,13 +50,29 @@
 
 @media (max-width: 1440px) {
   .download-app-wrap {
-    padding: 0;
+    gap: 50px;
+  }
+  .download-app-telefone {
+    width: 45vw;
   }
   .download-app-telefone img {
-    height: 73vh;
+    height: 70vh;
+  }
+  .download-app-info {
+    gap: 1rem;
+    padding-right: 10rem;
+  }
+  .download-app-info h2 {
+    font-size: 2.5rem;
+  }
+  .download-app-info p {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 1330px) {
+  .download-app-telefone img {
+    height: 75vh;
+  }
   .download-app-info {
     padding-right: 8rem;
   }
@@ -69,8 +81,14 @@
   }
 }
 @media (max-width: 993px) {
+  .download-app-telefone img {
+    height: 65vh;
+  }
   .download-app-info h2 {
     font-size: 2.5rem;
+  }
+  .download-app-info p {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 773px) {
@@ -81,9 +99,6 @@
   .download-app-telefone {
     margin: 0 0 7rem 0;
     justify-content: center;
-  }
-  .download-app-telefone img {
-    height: 55vh;
   }
   .download-app-info {
     width: auto;
