@@ -1,6 +1,6 @@
 import './assets/styles/global.css';
 import './assets/styles/App.css';
-    
+
 import NavBar from './assets/components/NavBar.jsx';
 import HomePage from './assets/components/HomePage.jsx';
 import Footer from './assets/components/Footer.jsx';
@@ -30,21 +30,19 @@ function App() {
       window.scrollTo(0, 0);
     }
   }, [])
-  
+
   return (
-    <>
-      <section className="container-app">
-          <header>
-            <NavBar cartItems={cartItems} setCartItems={setCartItems}/>
-          </header>
-          <main>
-            <HomePage addToCart={addToCart}/>
-          </main>
-          <footer>
-            <Footer/>
-          </footer>
-      </section>
-    </>
+    <section className="container-app">
+      <header>
+        <NavBar cartItems={cartItems} setCartItems={setCartItems} />
+      </header>
+      <main>
+        <HomePage addToCart={addToCart} />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </section>
   )
 }
 
