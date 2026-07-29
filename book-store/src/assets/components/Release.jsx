@@ -1,6 +1,6 @@
 import '../styles/Release.css';
 import { useState } from 'react';
-import { LuPlusCircle } from "react-icons/lu";
+import { MdOutlineAddCircle } from "react-icons/md";
 import { FaArrowRightLong } from 'react-icons/fa6';
 import PropTypes from 'prop-types';
 
@@ -55,7 +55,7 @@ const Release = (props) => {
                                     event.preventDefault(); 
                                     props.addToCart(book);
                                 }}>
-                                {hover[book.id] ? <LuPlusCircle/> : "COMPRAR"}
+                                {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
                                 </a>
                             </section>
                     ))}                            

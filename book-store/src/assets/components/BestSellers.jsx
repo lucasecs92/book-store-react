@@ -1,7 +1,7 @@
 import '../styles/BestSellers.css';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { LuPlusCircle } from "react-icons/lu";
+import { MdOutlineAddCircle } from "react-icons/md";
 import PropTypes from 'prop-types';
 
 import image1 from '../img/book1.jpg';
@@ -107,7 +107,7 @@ const BestSellers = (props) => {
                                         onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
                                         onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
                                         onClick={(event) => {event.preventDefault(); props.addToCart(book);}}>
-                                        {hover[book.id] ? <LuPlusCircle/> : "COMPRAR"}
+                                        {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
                                         </a>
                                     </section>
                                 </SwiperSlide>
