@@ -32,7 +32,7 @@ const BestSellers = (props) => {
 
     const [hover, setHover] = useState({});
 
-    const [slidesPerView, setSlidePerView] = useState(4);
+    const [slidesPerView, setSlidesPerView] = useState(4);
 
     const [isNavigationEnabled, setIsNavigationEnabled] = useState(window.innerWidth > 1366);
     
@@ -41,19 +41,19 @@ const BestSellers = (props) => {
         function handleResize(){
             
             if(window.innerWidth < 1255) {
-                setSlidePerView(3);
+                setSlidesPerView(3);
             } else {
-                setSlidePerView(4);
+                setSlidesPerView(4);
             }
             
             if(window.innerWidth < 1040) {
-                setSlidePerView(2);
+                setSlidesPerView(2);
             }
 
             setIsNavigationEnabled(window.innerWidth < 802);
             
             if(window.innerWidth < 803) {
-                setSlidePerView(1); 
+                setSlidesPerView(1); 
             }
         }
 
@@ -68,55 +68,53 @@ const BestSellers = (props) => {
     }, [])
 
     return (
-        <>
-            <section className="best-sellers" id='bestSellers'>
-                <h3 className="best-sellers-title">Mais Vendidos</h3>
+        <section className="best-sellers" id='bestSellers'>
+            <h3 className="best-sellers-title">Mais Vendidos</h3>
 
-                <section className="slide-book">
-                    <Swiper
-                    slidesPerView={slidesPerView}
-                    // pagination={{ clickable: true }}
-                    navigation={isNavigationEnabled}
-                    loop={true}
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    }}
-                    >
-                        {books.map((book) => {
-                            return (    
-                                <SwiperSlide key={book.id}>
-                                    <section className="slide-book-inner">
-                                        <img
-                                        src={book.image}
-                                        alt={book.title}
-                                        className="slide-img"
-                                        />
-                                        <aside className="slide-book-info">
-                                            <h2 className="slide-book-title">
-                                               {book.title}
-                                            </h2>
-                                            <p className="slide-book-autor">
-                                               {book.author}
-                                            </p>
-                                            <p className="slide-book-price">
-                                               {book.price}
-                                            </p>
-                                        </aside>
-                                        <a href="#" className="slide-book-btn" aria-label={`Comprar ${book.title}`} 
-                                        onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
-                                        onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
-                                        onClick={(event) => {event.preventDefault(); props.addToCart(book);}}>
-                                        {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
-                                        </a>
-                                    </section>
-                                </SwiperSlide>
-                            )
-                        })}
-                    </Swiper>
-                </section>
+            <section className="slide-book">
+                <Swiper
+                slidesPerView={slidesPerView}
+                // pagination={{ clickable: true }}
+                navigation={isNavigationEnabled}
+                loop={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+                >
+                    {books.map((book) => {
+                        return (    
+                            <SwiperSlide key={book.id}>
+                                <section className="slide-book-inner">
+                                    <img
+                                    src={book.image}
+                                    alt={book.title}
+                                    className="slide-img"
+                                    />
+                                    <aside className="slide-book-info">
+                                        <h2 className="slide-book-title">
+                                            {book.title}
+                                        </h2>
+                                        <p className="slide-book-autor">
+                                            {book.author}
+                                        </p>
+                                        <p className="slide-book-price">
+                                            {book.price}
+                                        </p>
+                                    </aside>
+                                    <button type="button" className="slide-book-btn" aria-label={`Comprar ${book.title}`} 
+                                    onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
+                                    onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
+                                    onClick={() => props.addToCart(book)}>
+                                    {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
+                                    </button>
+                                </section>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </section>
-        </>
+        </section>
     )
 }
 
