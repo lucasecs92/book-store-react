@@ -31,47 +31,42 @@ const Release = (props) => {
     const [hover, setHover] = useState({});
 
     return (
-        <>
-            <section className="release-container" id='release'>
-                <h3 className="release-title">Lançamentos</h3>
-                <section className="release-books">
-                    {books.slice(0, displayCount).map((book) => (
-                            <section key={book.id} className="inner">
-                                <img
-                                src={book.image}
-                                alt={book.title}
-                                className="release-book-img"
-                                />
-                                <aside className="release-book-info">
-                                    <h2 className="release-book-title">{book.title}</h2>
-                                    <p className="release-book-autor">{book.author}</p>
-                                    <p className="release-book-price">{book.price}</p>
-                                </aside>
-            
-                                <a href="#" className="release-book-btn" 
-                                onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
-                                onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
-                                onClick={(event) => {
-                                    event.preventDefault(); 
-                                    props.addToCart(book);
-                                }}>
-                                {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
-                                </a>
-                            </section>
-                    ))}                            
-                </section>
-
-                {displayCount < books.length && (
-                    <span className="view-more-wrap" onClick={() => setDisplayCount(books.length)}>
-                        <div className="view-more-wrap-wrap">
-                            <p>View More</p>
-                            <FaArrowRightLong className="arrow-icon"/>
-                        </div>
-                    </span>
-                )}
-
+        <section className="release-container" id='release'>
+            <h3 className="release-title">Lançamentos</h3>
+            <section className="release-books">
+                {books.slice(0, displayCount).map((book) => (
+                        <section key={book.id} className="inner">
+                            <img
+                            src={book.image}
+                            alt={book.title}
+                            className="release-book-img"
+                            />
+                            <aside className="release-book-info">
+                                <h2 className="release-book-title">{book.title}</h2>
+                                <p className="release-book-autor">{book.author}</p>
+                                <p className="release-book-price">{book.price}</p>
+                            </aside>
+        
+                            <button type="button" className="release-book-btn" 
+                            onMouseEnter={() => setHover(prevHover => ({ ...prevHover, [book.id]: true }))} 
+                            onMouseLeave={() => setHover(prevHover => ({ ...prevHover, [book.id]: false }))} 
+                            onClick={() => props.addToCart(book)}>
+                            {hover[book.id] ? <MdOutlineAddCircle/> : "COMPRAR"}
+                            </button>
+                        </section>
+                ))}                            
             </section>
-        </>   
+
+            {displayCount < books.length && (
+                <button type="button" className="view-more-wrap" onClick={() => setDisplayCount(books.length)}>
+                    <div className="view-more-wrap-wrap">
+                        <p>View More</p>
+                        <FaArrowRightLong className="arrow-icon"/>
+                    </div>
+                </button>
+            )}
+
+        </section>
     )
 }
 
